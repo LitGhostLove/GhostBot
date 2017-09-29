@@ -1,5 +1,5 @@
-site_name: NadekoBot
-repo_url: https://github.com/Kwoth/NadekoBot
+site_name: GhostBot
+repo_url: https://github.com/LitGhostLove/GhostBot
 pages:
 - Home: index.md
 - About: about.md
