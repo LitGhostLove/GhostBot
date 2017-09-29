@@ -1,25 +1,26 @@
-site_name: NadekoBot
-repo_url: https://github.com/LitGhostLove/GhostBot
+site_name: GhostBot powered by NadekoBot
+repo_url: https://github.com/Kwoth/NadekoBot
 pages:
 - 主頁: index.md
-- About: about.md
-- Guides:
-    - Windows Guide: guides/Windows Guide.md
-    - Linux Guide: guides/Linux Guide.md
-    - OSX Guide: guides/OSX Guide.md
-    - Docker Guide: guides/Docker Guide.md
-    - From Source: guides/From Source.md
-    - Upgrading Guide: guides/Upgrading Guide.md
-- Commands:
-    - Readme: Readme.md
-    - Commands List: Commands List.md
-- Features Explained:
-    - JSON Explanations: JSON Explanations.md
-    - Permissions System: Permissions System.md
-    - Custom Reactions: Custom Reactions.md
-    - Placeholders: Placeholders.md
-- Frequently Asked Questions: Frequently Asked Questions.md
-- Contribution Guide: Contribution Guide.md
-- ❤ Donate ❤: Donate.md
+- 關於: about.md
+- 指南:
+    - Windows 指南: guides/Windows Guide.md
+    - Linux 指南: guides/Linux Guide.md
+    - OSX 指南: guides/OSX Guide.md
+    - Docker 指南: guides/Docker Guide.md
+    - 從資源: guides/From Source.md
+    - 升級指南: guides/Upgrading Guide.md
+- 命令:
+    - 說明: Readme.md
+    - 英文命令列表: Commands List.md
+    - 中文命令列表: Chinese Commands List.md
+- 功能說明:
+    - JSON 功能: JSON Explanations.md
+    - 權限系統: Permissions System.md
+    - 自定義回覆: Custom Reactions.md
+    - 替代字符: Placeholders.md
+- 常見問題: Frequently Asked Questions.md
+- 貢獻指南: Contribution Guide.md
+- ❤ 贊助 ❤: Donate.md
 
 theme: readthedocs
