@@ -1,4 +1,4 @@
-site_name: GhostBot powered by NadekoBot
+site_name: GhostBot
 repo_url: https://github.com/Kwoth/NadekoBot
 pages:
 - 主頁: index.md
