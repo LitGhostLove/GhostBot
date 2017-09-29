@@ -1,6 +1,6 @@
 site_name: GhostBot
 repo_url: https://github.com/LitGhostLove/GhostBot
 pages:
-- 命令列表: Chinese command list.md
+- Command List: Chinese command list.md
 
 theme: readthedocs
