@@ -101,7 +101,7 @@
 `.setavatar` `.setav` | Sets a new avatar image for the NadekoBot. Argument is a direct link to an image. **僅限Bot擁有者** | `.setav http://i.imgur.com/xTG3a1I.jpg`
 `.setgame` | Sets the bots game. **僅限Bot擁有者** | `.setgame with snakes`
 `.setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **僅限Bot擁有者** | `.setstream TWITCHLINK Hello`
-`.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `｜` and prefix the channel id with `c:` and the user id with `u:`. **僅限Bot擁有者** | `.send serverid｜c:channelid message` 或 `.send serverid｜u:userid message`
+`.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **僅限Bot擁有者** | `.send serverid|c:channelid message` 或 `.send serverid|u:userid message`
 `.reloadimages` | Reloads images bot is using. Safe to use even when bot is being used heavily. **僅限Bot擁有者** | `.reloadimages`
 `.greetdel` `.grdel` | Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. **Bot需要`管理伺服器`權限** | `.greetdel 0` 或 `.greetdel 30`
 `.greet` | Toggles anouncements on the current channel when someone joins the server. **Bot需要`管理伺服器`權限** | `.greet`
@@ -461,7 +461,7 @@
 ### NSFW
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
-`.autohentai` | Posts a hentai every X seconds with a random tag from the provided tags. Use `｜` to separate tags. 20 seconds minimum. Provide no arguments to disable. **Bot需要`管理訊息`權限** | `.autohentai 30 yuri｜tail｜long_hair` 或 `.autohentai`
+`.autohentai` | Posts a hentai every X seconds with a random tag from the provided tags. Use `|` to separate tags. 20 seconds minimum. Provide no arguments to disable. **Bot需要`管理訊息`權限** | `.autohentai 30 yuri|tail|long_hair` 或 `.autohentai`
 `.autoboobs` | Posts a boobs every X seconds. 20 seconds minimum. Provide no arguments to disable. **Bot需要`管理訊息`權限** | `.autoboobs 30` 或 `.autoboobs`
 `.autobutts` | Posts a butts every X seconds. 20 seconds minimum. Provide no arguments to disable. **Bot需要`管理訊息`權限** | `.autobutts 30` 或 `.autobutts`
 `.hentai` | Shows a hentai image from a random website (gelbooru or danbooru or konachan or atfbooru or yandere) with a given tag. Tag is optional but preferred. Only 1 tag allowed.  | `.hentai yuri`
