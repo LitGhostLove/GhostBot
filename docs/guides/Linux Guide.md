@@ -12,7 +12,7 @@ Assuming you have followed the link above to setup an account and Droplet with 6
 - Download [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 - Download [WinSCP](https://winscp.net/eng/download.php) *(optional)*
 - Create and Invite the bot.
-	- Read here how to [create a Discord Bot application and invite it.](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#creating-discord-bot-application)
+	- Read here how to [create a Discord Bot application and invite it.](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#creating-discord-bot-application)
 
 #### Starting up
 
@@ -66,19 +66,19 @@ When installation is complete, you will see the options again.
 Next, check out:
 ##### Part IV - Setting up credentials
 
-- [1. Set up credentials.json](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
-- [2. Get the Google API](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-api-keys)
+- [1. Set up credentials.json](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
+- [2. Get the Google API](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys)
 
 You will need the following for the next step:
 ![botimg](https://cdn.discordapp.com/attachments/251504306010849280/276455844223123457/Capture.PNG)
 
-- **Bot's Client ID** and **Bot's ID** (both are same) [(*required)](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
+- **Bot's Client ID** and **Bot's ID** (both are same) [(*required)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
 - **Bot's Token** (not client secret) [(*required)](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
-- Your **Discord userID** [(*required)](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
-- **Google Api Key** [(optional)](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-api-keys)
-- **LoL Api Key** [(optional)](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-api-keys)
-- **Mashape Key** [(optional)](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-api-keys)
-- **Osu Api Key** [(optional)](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-api-keys)
+- Your **Discord userID** [(*required)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
+- **Google Api Key** [(optional)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys)
+- **LoL Api Key** [(optional)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys)
+- **Mashape Key** [(optional)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys)
+- **Osu Api Key** [(optional)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys)
 
 Once you have acquired them, press `5` to **Set up credentials.json**
 
@@ -93,9 +93,9 @@ Next, press `2` to **Run Nadeko (Normally)**.
 Check in your discord server if your new bot is working properly.	
 ##### Part VI - Running Nadeko on tmux
 If your bot is working properly in your server, type `.die` to **shut down the bot**, then press `6` on the console to **exit**.
-Next, [Run your bot again with **tmux**.](http://nadekobot.readthedocs.io/en/latest/guides/Linux%20Guide/#running-nadekobot)	
+Next, [Run your bot again with **tmux**.](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Linux%20Guide/#running-nadekobot)	
 
-[Check this when you need to **restart** your **NadekoBot** anytime later along with tmux session.](http://nadekobot.readthedocs.io/en/latest/guides/Linux%20Guide/#restarting-nadeko)
+[Check this when you need to **restart** your **NadekoBot** anytime later along with tmux session.](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Linux%20Guide/#restarting-nadeko)
 
 #### Running NadekoBot
 
@@ -112,10 +112,10 @@ The above command will create a new session named **nadeko** *(you can replace â
 **From the options,**
 
 Choose `2` to **Run NadekoBot normally.**		
-**NOTE:** With option `2` (Running normally), if you use `.die` [command](http://nadekobot.readthedocs.io/en/latest/Commands%20List/#administration) in discord. The bot will shut down and will stay offline until you manually run it again. (best if you want to check the bot.)
+**NOTE:** With option `2` (Running normally), if you use `.die` [command](http://ghostbot.readthedocs.io/zh_TW/latest/Commands%20List/#administration) in discord. The bot will shut down and will stay offline until you manually run it again. (best if you want to check the bot.)
 
 Choose `3` to **Run NadekoBot with Auto Restart.**	
-**NOTE:** With option `3` (Running with Auto Restart), bot will auto run if you use `.die` [command](http://nadekobot.readthedocs.io/en/latest/Commands%20List/#administration) making the command `.die` to function as restart.	
+**NOTE:** With option `3` (Running with Auto Restart), bot will auto run if you use `.die` [command](http://ghostbot.readthedocs.io/zh_TW/latest/Commands%20List/#administration) making the command `.die` to function as restart.	
 
 It will show you the following options: 
 ```
@@ -127,7 +127,7 @@ It will show you the following options:
 - With option `1. Run Auto Restart normally without Updating.` Bot will restart on `die` command and will not be downloading the latest build available.
 - With option `2. Run Auto Restart and update NadekoBot.` Bot will restart and download the latest build of bot available everytime `die` command is used.
 
-**Remember** that, while running with Auto Restart, you will need to [close the tmux session](http://nadekobot.readthedocs.io/en/latest/guides/Linux%20Guide/#restarting-nadeko) to stop the bot completely.
+**Remember** that, while running with Auto Restart, you will need to [close the tmux session](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Linux%20Guide/#restarting-nadeko) to stop the bot completely.
 
 **Now check your Discord, the bot should be online**
 
@@ -137,7 +137,7 @@ Next to **move the bot to background** and to do that, press **CTRL+B, release, 
 
 **Restarting NadekoBot:**
 
-**If** you have chosen option `2` to **Run Nadeko with Auto Restart** from Nadeko's `linuxAIO.sh` *[(you got it from this step)](http://nadekobot.readthedocs.io/en/latest/guides/Linux%20Guide/#getting-nadekobot)*	
+**If** you have chosen option `2` to **Run Nadeko with Auto Restart** from Nadeko's `linuxAIO.sh` *[(you got it from this step)](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Linux%20Guide/#getting-nadekobot)*	
 You can simply type `.die` in the server you have your NadekoBot to make her restart.
 
 **Restarting Nadeko with the Server:**
@@ -148,7 +148,7 @@ Open **PuTTY** and login as you have before, type `reboot` and press Enter.
 
 - Kill your previous session, check with `tmux ls`
 - `tmux kill-session -t nadeko` (don't forget to replace "nadeko" to what ever you named your bot's session)
-- [Run the bot again.](http://nadekobot.readthedocs.io/en/latest/guides/Linux%20Guide/#running-nadekobot)
+- [Run the bot again.](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Linux%20Guide/#running-nadekobot)
 
 #### Updating Nadeko
 
@@ -196,6 +196,6 @@ To set up Nadeko for music and Google API Keys, follow [Setting up your API keys
 
 
 [img7]: https://cdn.discordapp.com/attachments/251504306010849280/251505766370902016/setting_up_credentials.gif
-[setup credentials]: http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file
-[setup music]: http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-api-keys
-[upgrading]: http://nadekobot.readthedocs.io/en/latest/guides/Upgrading%20Guide/
+[setup credentials]: http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file
+[setup music]: http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys
+[upgrading]: http://ghostbot.readthedocs.io/zh_TW/latest/guides/Upgrading%20Guide/
