@@ -3,17 +3,17 @@
 #### Prerequisites 
 - [Notepad++][Notepad++] (or some other decent text editor)
 - Windows 8 or later
-- [Create Discord Bot application](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#creating-discord-bot-application) and [Invite the bot to your server](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#inviting-your-bot-to-your-server). 
+- [Create Discord Bot application](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#creating-discord-bot-application) and [Invite the bot to your server](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#inviting-your-bot-to-your-server). 
 
 #### Guide 
 - Download and run the [NadekoBot Updater.][Updater]
 - Press **`Install ffmpeg`** and **`Install youtube-dl`** if you want music features. 			
 ***NOTE:** RESTART YOUR PC IF YOU DO.*
 - Press **`Update`** and go through the installation wizard.			
-***NOTE:** If you're upgrading from 1.3, DO NOT select your old nadekobot folder. Install it in a separate directory and read the [upgrading guide](http://nadekobot.readthedocs.io/en/latest/guides/Upgrading%20Guide/).*
+***NOTE:** If you're upgrading from 1.3, DO NOT select your old nadekobot folder. Install it in a separate directory and read the [upgrading guide](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Windows%20Guide/#updating-nadekobot).*
 - When installation is finished, make sure **`Open credentials.json`** is checked. 			
 ***NOTE:** Make sure to open it with Notepad++ or some other decent text editor.*
-- [Set up credentials.json](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file) file.
+- [Set up credentials.json](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file) file.
 
 #### Starting the bot
 - Either press **`Start`** Button in the updater, or run the bot via it's desktop shortcut.
