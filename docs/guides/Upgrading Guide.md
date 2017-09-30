@@ -3,7 +3,7 @@
 #### If you have NadekoBot 1.x on Windows
 
 - Go to `NadekoBot\src\NadekoBot` and backup your `credentials.json` file; then go to `NadekoBot\src\NadekoBot\bin\Release\netcoreapp1.0` and backup your `data` folder.
-- Follow the [Windows Guide](http://nadekobot.readthedocs.io/en/latest/guides/Windows%20Guide/) and install the latest version of **NadekoBot**.
+- Follow the [Windows Guide](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Windows%20Guide/) and install the latest version of **NadekoBot**.
 - Paste your `credentials.json` file into the `C:\Program Files\NadekoBot\system` folder.
 - Paste your `data` folder into `C:\Program Files\NadekoBot\system` folder.
 - If it asks you to overwrite files, it is fine to do so.
@@ -22,5 +22,5 @@
 - Next, use the command `cd ~ && wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.9/linuxAIO.sh && bash linuxAIO.sh`
 - **For Ubuntu, Debian and CentOS Users Only:** use the option `4. Auto-Install Prerequisites` to install the latest version of .NET Core SDK.
 - Use option `1. Download NadekoBot` to update your NadekoBot to 1.9.x.
-- Next, just [run your NadekoBot.](http://nadekobot.readthedocs.io/en/latest/guides/Linux%20Guide/#running-nadekobot)
+- Next, just [run your NadekoBot.](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Linux%20Guide/#running-nadekobot)
 - *NOTE: 1.9.x uses `NadekoBot.db` file from `NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.0/data` folder.*
