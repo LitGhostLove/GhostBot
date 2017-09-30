@@ -2,7 +2,7 @@
 
 #### Prerequisites 
 - [Homebrew][Homebrew]
-- [Google Account](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-api-keys)
+- [Google Account](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys)
 - Text Editor (TextWrangler, or equivalent) or outside editor such as [Atom][Atom]
 
 #### Installing Homebrew
@@ -71,17 +71,17 @@ Next, choose `6` to exit.
 
 #### Creating and Inviting bot
 
-- Read here [how to create a Discord Bot application and invite it.](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#creating-discord-bot-application)
+- Read here [how to create a Discord Bot application and invite it.](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#creating-discord-bot-application)
  
 #### Setting up Credentials.json file
 - Open up the `NadekoBot` folder, which should be in your home directory, then `NadekoBot` folder then `src` folder and then the additonal `NadekoBot` folder.
-- Edit the way its guided here: [Setting up credentials.json](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
+- Edit the way its guided here: [Setting up credentials.json](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
 - **If** you already have Nadeko 1.x setup and have `credentials.json` and `NadekoBot.db`, you can just copy and paste the `credentials.json` to `NadekoBot/src/NadekoBot` and `NadekoBot.db` to `NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.0/data`.			
-**Or** follow the [Upgrading Guide.](http://nadekobot.readthedocs.io/en/latest/guides/Upgrading%20Guide/)
+**Or** follow the [Upgrading Guide.](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Upgrading%20Guide/)
 
 #### Setting NadekoBot Music
 
-For Music Setup and API keys check [Setting up NadekoBot for Music](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-api-keys) and [JSON Explanations](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/).
+For Music Setup and API keys check [Setting up NadekoBot for Music](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys) and [JSON Explanations](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/).
 
 #### Running NadekoBot
 
@@ -104,10 +104,10 @@ The above command will create a new session named **nadeko** *(you can replace â
 **From the options,**
 
 Choose `2` to **Run NadekoBot normally.**		
-**NOTE:** With option `2` (Running normally), if you use `.die` [command](http://nadekobot.readthedocs.io/en/latest/Commands%20List/#administration) in discord. The bot will shut down and will stay offline until you manually run it again. (best if you want to check the bot.)
+**NOTE:** With option `2` (Running normally), if you use `.die` [command](http://ghostbot.readthedocs.io/zh_TW/latest/Commands%20List/#administration) in discord. The bot will shut down and will stay offline until you manually run it again. (best if you want to check the bot.)
 
 Choose `3` to **Run NadekoBot with Auto Restart.**	
-**NOTE:** With option `3` (Running with Auto Restart), bot will auto run if you use `.die` [command](http://nadekobot.readthedocs.io/en/latest/Commands%20List/#administration) making the command `.die` to function as restart.	
+**NOTE:** With option `3` (Running with Auto Restart), bot will auto run if you use `.die` [command](http://ghostbot.readthedocs.io/zh_TW/latest/Commands%20List/#administration) making the command `.die` to function as restart.	
 
 It will show you the following options: 
 ```
@@ -119,7 +119,7 @@ It will show you the following options:
 - With option `1. Run Auto Restart normally without Updating.` Bot will restart on `die` command and will not be downloading the latest build available.
 - With option `2. Run Auto Restart and update NadekoBot.` Bot will restart and download the latest build of bot available everytime `die` command is used.
 
-**Remember** that, while running with Auto Restart, you will need to [close the tmux session](http://nadekobot.readthedocs.io/en/latest/guides/Linux%20Guide/#restarting-nadeko) to stop the bot completely.
+**Remember** that, while running with Auto Restart, you will need to [close the tmux session](http://ghostbot.readthedocs.io/zh_TW/latest/guides/Linux%20Guide/#restarting-nadeko) to stop the bot completely.
 
 
 Now time to move bot to background and to do that, press CTRL+B,D (this will detach the nadeko session using TMUX)	
@@ -128,7 +128,7 @@ If you used Screen press CTRL+A+D (this will detach the nadeko screen)
 #### Updating Nadeko
 
 - Connect to the terminal.
-- `tmux kill-session -t nadeko` [(don't forget to replace **nadeko** in the command to what ever you named your bot's session)](http://nadekobot.readthedocs.io/en/latest/guides/OSX%20Guide/#some-more-info)
+- `tmux kill-session -t nadeko` [(don't forget to replace **nadeko** in the command to what ever you named your bot's session)](http://ghostbot.readthedocs.io/zh_TW/latest/guides/OSX%20Guide/#some-more-info)
 - Make sure the bot is **not** running.
 - `tmux new -s nadeko` (**nadeko** is the name of the session)
 - `cd ~ && wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.9/linuxAIO.sh && bash linuxAIO.sh`
