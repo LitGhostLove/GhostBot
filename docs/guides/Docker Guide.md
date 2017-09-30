@@ -12,7 +12,7 @@ docker create --name=nadeko -v /nadeko/conf/:/root/nadeko -v /nadeko/data:/opt/N
 ```
 -If you are coming from a previous version of nadeko (the old docker) make sure your credentials.json has been copied into this directory and is the only thing in this folder. 
 
--If you are making a fresh install, create your credentials.json from the following guide and place it in the /nadeko folder [Nadeko JSON Guide](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/)
+-If you are making a fresh install, create your credentials.json from the following guide and place it in the /nadeko folder [Nadeko JSON Guide](hhttp://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/)
 
 Next start the docker up with `docker start nadeko; docker logs -f nadeko`
 
@@ -55,4 +55,4 @@ This will check for updates to the docker every 5 minutes and update immediately
 
 If you have any issues with the docker setup, please ask in #help channel on our [Discord server](https://discordapp.com/invite/nadekobot) but indicate you are using the docker.
 
-For information about configuring your bot or its functionality, please check the [documentation](http://nadekobot.readthedocs.io/en/latest).
+For information about configuring your bot or its functionality, please check the [documentation](http://ghostbot.readthedocs.io/zh_TW/latest).
