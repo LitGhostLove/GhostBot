@@ -1,4 +1,4 @@
-#NadekoBot Documentation
+#NadekoBot 說明文件
 
 To invite public NadekoBot to your server, click on the image bellow:
 
@@ -12,26 +12,27 @@ Here you can read current [Issues][Issues].
 
 If you want to contribute, be sure to PR on the current **[default][repo]** branch.
 
-##Content
-- [About](about.md)
-- Guides
-	- [Windows Guide](guides/Windows Guide.md)
-	- [Linux Guide](guides/Linux Guide.md)
-	- [OSX Guide](guides/OSX Guide.md)
-	- [Docker Guide](guides/Docker Guide.md)
-	- [From Source](guides/From Source.md)
-	- [Upgrading Guide](guides/Upgrading Guide.md)
-- Commands
-	- [Readme](Readme.md)
-	- [Commands List](Commands List.md)
-- Features Explained
-	- [Permissions System](Permissions System.md)
-	- [JSON Explanations](JSON Explanations.md)
-	- [Custom Reactions](Custom Reactions.md)
-	- [Placeholders](Placeholders.md)
-- [Frequently Asked Questions](Frequently Asked Questions.md)
-- [Contribution Guide](Contribution Guide.md)
-- [Donate](Donate.md)
+##目錄
+- [關於](about.md)
+- 指南
+	- [Windows 指南](guides/Windows Guide.md)
+	- [Linux 指南](guides/Linux Guide.md)
+	- [OSX 指南](guides/OSX Guide.md)
+	- [Docker 指南](guides/Docker Guide.md)
+	- [使用資源](guides/From Source.md)
+	- [升級指南](guides/Upgrading Guide.md)
+- 命令
+	- [說明](Readme.md)
+	- [英文命令列表](Commands List.md)
+	- [中文命令列表](Chinese Commands List.md)
+- 功能說明
+	- [權限系統](Permissions System.md)
+	- [JSON功能](JSON Explanations.md)
+	- [自訂義回覆](Custom Reactions.md)
+	- [替代字符](Placeholders.md)
+- [常見問題](Frequently Asked Questions.md)
+- [貢獻指南](Contribution Guide.md)
+- [贊助](Donate.md)
 
 [img]: https://cdn.discordapp.com/attachments/202743183774318593/210580315381563392/discord.png
 [NadekoBot Server]: https://discord.gg/nadekobot
