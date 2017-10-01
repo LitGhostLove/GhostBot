@@ -27,7 +27,7 @@ If you want to contribute, be sure to PR on the current **[default][repo]** bran
 	- [中文命令列表](Chinese Commands List.md)
 - 功能說明
 	- [權限系統](Permissions System.md)
-	- [JSON功能](JSON Explanations.md)
+	- [JSON 功能](JSON Explanations.md)
 	- [自訂義回覆](Custom Reactions.md)
 	- [替代字符](Placeholders.md)
 - [常見問題](Frequently Asked Questions.md)
