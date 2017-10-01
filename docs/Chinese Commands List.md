@@ -160,7 +160,7 @@
 `.srvrfilterwords` `.sfw` | Toggles automatic deletion of messages containing filtered words on the server. Does not affect the Bot Owner.  | `.sfw`
 `.chnlfilterwords` `.cfw` | Toggles automatic deletion of messages containing filtered words on the channel. Does not negate the `.srvrfilterwords` enabled setting. Does not affect the Bot Owner.  | `.cfw`
 `.fw` | Adds or removes (if it exists) a word from the list of filtered words. Use`.sfw` 或 `.cfw` to toggle filtering.  | `.fw poop`
-`.lstfilterwords` `.lfw` | Shows a list of filtered words.  | `.lfw`
+`.lstfilterwords` `.lfw` | 列出過濾字詞。 | `.lfw`
 `.listglobalperms` `.lgp` | Lists global permissions set by the bot owner. **僅限機器人所有者** | `.lgp`
 `.globalmodule` `.gmod` | Toggles whether a module can be used on any server. **僅限機器人所有者** | `.gmod nsfw`
 `.globalcommand` `.gcmd` | Toggles whether a command can be used on any server. **僅限機器人所有者** | `.gcmd .stats`
