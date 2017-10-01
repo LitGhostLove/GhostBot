@@ -8,7 +8,7 @@ pages:
     - Linux 指南: guides/Linux Guide.md
     - OSX 指南: guides/OSX Guide.md
     - Docker 指南: guides/Docker Guide.md
-    - 從資源: guides/From Source.md
+    - 使用資源: guides/From Source.md
     - 升級指南: guides/Upgrading Guide.md
 - 命令:
     - 說明: Readme.md
