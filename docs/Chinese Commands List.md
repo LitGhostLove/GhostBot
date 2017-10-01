@@ -49,7 +49,7 @@
 `.mentionrole` `.menro` | 通知特定身分組內的所有成員(可選擇複數身分組，以','分隔不同的身分組)。 **機器人需要`通知所有人`權限** | `.menro RoleName`
 `.donators` | 列出所有可愛的贊助者。 | `.donators`
 `.donadd` | 將一名贊助者添加到資料庫。 **僅限機器人所有者** | `.donadd Donate Amount`
-`.autoassignrole` `.aar` | 自動給予每個新加入的用戶選定的身分組。 **機器人需要`管理身分組`權限** | `.aar` to disable, `.aar Role Name` to enable
+`.autoassignrole` `.aar` | 自動給予每個新加入的用戶選定的身分組。 **機器人需要`管理身分組`權限** | `.aar` 關閉, `.aar 身分組名稱` 開啟
 `.gvc` | Toggles game voice channel feature in the voice channel you're currently in. Users who join the game voice channel will get automatically redirected to the voice channel with the name of their current game, if it exists. Can't move users to channels that the bot has no connect permission for. One per server. **機器人需要`管理員`權限** | `.gvc`
 `.languageset` `.langset` | 設定機器人在當前伺服器上所使用的語言。如果機器人欲顯示的訊息已被翻譯成該語言，則會使用該語言來表示，反之則使用英語。若輸入`default`將重設為預設值。不提供參數則查看當前所設置的語言。 | `.langset de-DE ` 或 `.langset default`
 `.langsetdefault` `.langsetd` | Sets the bot's default response language. All servers which use a default locale will use this one. Setting to `default` will use the host's current culture. Provide no arguments to see currently set language.  | `.langsetd en-US` 或 `.langsetd default`
@@ -160,7 +160,7 @@
 `.srvrfilterwords` `.sfw` | Toggles automatic deletion of messages containing filtered words on the server. Does not affect the Bot Owner.  | `.sfw`
 `.chnlfilterwords` `.cfw` | Toggles automatic deletion of messages containing filtered words on the channel. Does not negate the `.srvrfilterwords` enabled setting. Does not affect the Bot Owner.  | `.cfw`
 `.fw` | Adds or removes (if it exists) a word from the list of filtered words. Use`.sfw` 或 `.cfw` to toggle filtering.  | `.fw poop`
-`.lstfilterwords` `.lfw` | 列出過濾字詞。 | `.lfw`
+`.lstfilterwords` `.lfw` | Shows a list of filtered words.  | `.lfw`
 `.listglobalperms` `.lgp` | Lists global permissions set by the bot owner. **僅限機器人所有者** | `.lgp`
 `.globalmodule` `.gmod` | Toggles whether a module can be used on any server. **僅限機器人所有者** | `.gmod nsfw`
 `.globalcommand` `.gcmd` | Toggles whether a command can be used on any server. **僅限機器人所有者** | `.gcmd .stats`
