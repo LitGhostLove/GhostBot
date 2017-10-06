@@ -423,7 +423,7 @@
 `.crca` | Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it).  | `.crca 44`
 `.crdm` | Toggles whether the response message of the custom reaction will be sent as a direct message.  | `.crdm 44`
 `.crad` | Toggles whether the message triggering the custom reaction will be automatically deleted.  | `.crad 59`
-`.crstatsclear` | Resets the counters on `.crstats`. You can specify a trigger to clear stats only for that trigger. **僅限機器人所有者** | `.crstatsclear` 或 `.crstatsclear rng`
+`.crstatsclear` | 重置 `.crstats` 上的計數器。您可以指定清除特定觸發文字的統計資訊。僅限機器人擁有者。 **僅限機器人所有者** | `.crstatsclear` 或 `.crstatsclear rng`
 `.crstats` | Shows a list of custom reactions and the number of times they have been executed. Paginated with 10 per page. Use `.crstatsclear` to reset the counters.  | `.crstats` 或 `.crstats 3`
 
 ###### [回目錄](#目錄)
