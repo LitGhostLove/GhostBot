@@ -265,7 +265,7 @@
 `.flip` | 翻硬幣 - 人頭(heads)或字(tails)，並顯示其圖像。 | `.flip` 或 `.flip 3`
 `.betflip` `.bf` | 翻硬幣並猜其結果，人頭(heads)或字(tails)。猜中後將獎勵你**下注金額x1.95(四捨五入)**。機器人擁有者可更改乘數。 | `.bf 5 heads` 或 `.bf 3 t`
 `.shop` | 列出這個伺服器上的商店。 | `.shop` 或 `.shop 2`
-`.buy` | Buys an item from the shop on a given index. If buying items, make sure that the bot can DM you.  | `.buy 2`
+`.buy` | 根據輸入的編號在商店上購買一個商品。購買商品前請確保機器人可以私訊您。 | `.buy 2`
 `.shopadd` | Adds an item to the shop by specifying type price and name. Available types are role and list. **機器人需要`管理員`權限** | `.shopadd role 1000 Rich`
 `.shoplistadd` | Adds an item to the list of items for sale in the shop entry given the index. You usually want to run this command in the secret channel, so that the unique items are not leaked. **機器人需要`管理員`權限** | `.shoplistadd 1 Uni-que-Steam-Key`
 `.shoprem` `.shoprm` | Removes an item from the shop by its ID. **機器人需要`管理員`權限** | `.shoprm 1`
@@ -289,7 +289,7 @@
 `.movelist` `.ml` | 列出您可使用的動作。 | `.ml`
 `.heal` | 花費一點貨幣，治癒某個人或復活某位暈倒的玩家。 | `.heal @someone`
 `.type` | 查詢目標的屬性。 | `.type @someone`
-`.settype` | 花費一點貨幣來重新設定你的寶可夢屬性；不提供參數時將顯示屬性列表。 | `.settype fire` 或 `.settype`
+`.settype` | 花費一點貨幣來重新設定你的寶可夢屬性；不提供參數時將顯示屬性列表。 | `.settype 火` 或 `.settype`
 
 ###### [回目錄](#目錄)
 
