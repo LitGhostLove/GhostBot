@@ -2,15 +2,15 @@
 
 ## 目錄
 - [幫助](#_2)
-- [管理](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_4)
-- [權限](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_6)
-- [音樂](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_8)
-- [小遊戲](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_10)
-- [賭博](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_12)
-- [寶可夢](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_14)
-- [搜尋](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_16)
-- [小工具](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_18)
-- [自定義回覆](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_20)
+- [管理](#_4)
+- [權限](#_6)
+- [音樂](#_8)
+- [小遊戲](#_10)
+- [賭博](#_12)
+- [寶可夢](#_14)
+- [搜尋](#_16)
+- [小工具](#_18)
+- [自定義回覆](#_20)
 - [Xp](#xp)
 - [NSFW](#nsfw)
 
@@ -25,7 +25,7 @@
 `.readme` `.guide` | 在頻道內發送機器人簡介與教學連結。 | `.readme` 或 `.guide`
 `.donate` | 顯示關於贊助NadekoBot的資訊。 | `.donate`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 管理
 指令與簡寫 | 說明 | 用法
@@ -128,7 +128,7 @@
 `.voice+text` `.v+t` | Creates a text channel for each voice channel only users in that voice channel can see. If you are server owner, keep in mind you will see them all the time regardless. **機器人需要`管理身分組`權限** **機器人需要`管理頻道`權限** | `.v+t`
 `.cleanvplust` `.cv+t` | Deletes all text channels ending in `-voice` for which voicechannels are not found. Use at your own risk. **機器人需要`管理頻道`權限** **機器人需要`管理身分組`權限** | `.cleanv+t`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 權限
 指令與簡寫 | 說明 | 用法
@@ -167,7 +167,7 @@
 `.resetperms` | 重設這個伺服器上的權限模組至預設值。 **機器人需要`管理員`權限** | `.resetperms`
 `.resetglobalperms` | 重設所有伺服器上的權限模組至預設值。 **僅限機器人所有者** | `.resetglobalperms`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 音樂
 指令與簡寫 | 說明 | 用法
@@ -207,7 +207,7 @@
 `.autoplay` `.ap` | 開啟/關閉自動播放 - 歌曲播放完畢後自動點播相關影片。(僅適用於播放Youtube歌曲，且點播列表無任何歌曲時才會作用) | `.ap`
 `.setmusicchannel` `.smch` | 將目前文字頻道設為音樂訊息輸出頻道。這將輸出播放、結束、暫停和刪除的音樂訊息到當前文字頻道。 **機器人需要`管理訊息`權限** | `.smch`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 小遊戲
 指令與簡寫 | 說明 | 用法
@@ -241,7 +241,7 @@
 `.tl` | Shows a current trivia leaderboard.  | `.tl`
 `.tq` | Quits current trivia after current question.  | `.tq`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 賭博
 指令與簡寫 | 說明 | 用法
@@ -280,7 +280,7 @@
 `.waifugift` `.gift` `.gifts` | Gift an item to someone. This will increase their waifu value by 50% of the gifted item's value if they don't have affinity set towards you, or 100% if they do. Provide no arguments to see a list of items that you can gift. | `.gifts` 或 `.gift Rose @Himesama`
 `.wheeloffortune` `.wheel` | Bets a certain amount of currency on the wheel of fortune. Wheel can stop on one of many different multipliers. Won amount is rounded down to the nearest whole number. | `.wheel 10`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 寶可夢
 指令與簡寫 | 說明 | 用法
@@ -291,7 +291,7 @@
 `.type` | 查詢目標的屬性。 | `.type @someone`
 `.settype` | 花費一點貨幣來重新設定你的寶可夢屬性；不提供參數時將顯示屬性列表。 | `.settype 火` 或 `.settype`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 搜尋
 指令與簡寫 | 說明 | 用法
@@ -356,7 +356,7 @@
 `.translangs` | 列出所有有效的翻譯語言。 | `.translangs`
 `.xkcd` | Shows a XKCD comic. No arguments will retrieve random one. Number argument will retrieve a specific comic, and "latest" will get the latest one.  | `.xkcd` 或 `.xkcd 1400` 或 `.xkcd latest`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 小工具
 指令與簡寫 | 說明 | 用法
@@ -410,7 +410,7 @@
 `.convert` | Convert quantities. Use `.convertlist` to see supported dimensions and currencies.  | `.convert m km 1000`
 `.verboseerror` `.ve` | Toggles whether the bot should print command errors when a command is incorrectly used. **機器人需要`管理訊息`權限** | `.ve`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### 自定義回覆
 指令與簡寫 | 說明 | 用法
@@ -426,7 +426,7 @@
 `.crstatsclear` | 重置 `.crstats` 上的計數器。您可以指定清除特定觸發文字的統計資訊。僅限機器人擁有者。 **僅限機器人所有者** | `.crstatsclear` 或 `.crstatsclear rng`
 `.crstats` | Shows a list of custom reactions and the number of times they have been executed. Paginated with 10 per page. Use `.crstatsclear` to reset the counters.  | `.crstats` 或 `.crstats 3`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
 
 ### Xp
 指令與簡寫 | 說明 | 用法
@@ -456,7 +456,7 @@
 `.clubdisband` | 解散您所屬的俱樂部。這個命令是無法復原的，使用前請再三確認。 | `.clubdisband`
 `.clublb` | 顯示俱樂部排名。分頁。 | `.clublb 2`
  
- ###### [回目錄](#目錄)
+ ###### [回目錄](#_1)
 
 ### NSFW
 指令與簡寫 | 說明 | 用法
@@ -477,4 +477,4 @@
 `.nsfwtagbl` `.nsfwtbl` | Toggles whether the tag is blacklisted or not in nsfw searches. Provide no parameters to see the list of blacklisted tags. | `.nsfwtbl poop`
 `.nsfwcc` | Clears nsfw cache. **僅限機器人所有者** | `.nsfwcc`
 
-###### [回目錄](#目錄)
+###### [回目錄](#_1)
