@@ -1,16 +1,16 @@
 贊助原作者 => patreon: https://patreon.com/nadekobot paypal: https://paypal.me/Kwoth
 
 ## 目錄
-- [幫助](#幫助)
-- [管理](#管理)
-- [權限](#權限)
-- [音樂](#音樂)
-- [小遊戲](#小遊戲)
-- [賭博](#賭博)
-- [寶可夢](#寶可夢)
-- [搜尋](#搜尋)
-- [小工具](#小工具)
-- [自定義回覆](#自定義回覆)
+- [幫助](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_2)
+- [管理](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_4)
+- [權限](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_6)
+- [音樂](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_8)
+- [小遊戲](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_10)
+- [賭博](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_12)
+- [寶可夢](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_14)
+- [搜尋](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_16)
+- [小工具](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_18)
+- [自定義回覆](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_20)
 - [Xp](#xp)
 - [NSFW](#nsfw)
 
