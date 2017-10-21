@@ -1,7 +1,7 @@
 贊助原作者 => patreon: https://patreon.com/nadekobot paypal: https://paypal.me/Kwoth
 
 ## 目錄
-- [幫助](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_2)
+- [幫助](#_2)
 - [管理](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_4)
 - [權限](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_6)
 - [音樂](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_8)
