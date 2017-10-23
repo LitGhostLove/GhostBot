@@ -9,7 +9,6 @@ pages:
     - OSX 指南: guides/OSX Guide.md
     - Docker 指南: guides/Docker Guide.md
     - 使用資源: guides/From Source.md
-    - 升級指南: guides/Upgrading Guide.md
 - 命令:
     - 說明: Readme.md
     - 英文命令列表: Commands List.md
