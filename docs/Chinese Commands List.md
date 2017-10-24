@@ -50,6 +50,11 @@
 `.donators` | 列出所有可愛的贊助者。 | `.donators`
 `.donadd` | 將一名贊助者添加到資料庫。 **僅限機器人所有者** | `.donadd Donate Amount`
 `.autoassignrole` `.aar` | 自動給予每個新加入的用戶選定的身分組。 **機器人需要`管理身分組`權限** | `.aar` 關閉, `.aar 身分組名稱` 開啟
+`.execsql` | Executes an sql command and returns the number of affected rows. Dangerous. **僅限機器人所有者** | `.execsql UPDATE Currency SET Amount=Amount+1234`
+`.deletewaifus` | Deletes everything from WaifuUpdates and WaifuInfo tables. **僅限機器人所有者** | `.deletewaifus`
+`.deletecurrency` | Deletes everything from Currency and CurrencyTransactions. **僅限機器人所有者** | `.deletecurrency`
+`.deleteplaylists` | Deletes everything from MusicPlaylists. **僅限機器人所有者** | `.deleteplaylists`
+`.deleteexp` | deleteexp **僅限機器人所有者** | `deleteexp`
 `.gvc` | Toggles game voice channel feature in the voice channel you're currently in. Users who join the game voice channel will get automatically redirected to the voice channel with the name of their current game, if it exists. Can't move users to channels that the bot has no connect permission for. One per server. **機器人需要`管理員`權限** | `.gvc`
 `.languageset` `.langset` | 設定機器人在當前伺服器上所使用的語言。如果機器人欲顯示的訊息已被翻譯成該語言，則會使用該語言來表示，反之則使用英語。若輸入`default`將重設為預設值。不提供參數則查看當前所設置的語言。 | `.langset de-DE ` 或 `.langset default`
 `.langsetdefault` `.langsetd` | Sets the bot's default response language. All servers which use a default locale will use this one. Setting to `default` will use the host's current culture. Provide no arguments to see currently set language.  | `.langsetd en-US` 或 `.langsetd default`
@@ -58,7 +63,6 @@
 `.logignore` | Toggles whether the `.logserver` command ignores this channel. Useful if you have hidden admin channel and public log channel. **機器人需要`管理員`權限** **僅限機器人所有者** | `.logignore`
 `.logevents` | 列出您可以使用`.log`紀錄的所有事件類型。 **機器人需要`管理員`權限** **僅限機器人所有者** | `.logevents`
 `.log` | Toggles logging event. Disables it if it is active anywhere on the server. Enables if it isn't active. Use `.logevents` to see a list of all events you can subscribe to. **機器人需要`管理員`權限** **僅限機器人所有者** | `.log userpresence` 或 `.log userbanned`
-`.migratedata` | Migrate data from old bot configuration **僅限機器人所有者** | `.migratedata`
 `.setmuterole` | Sets a name of the role which will be assigned to people who should be muted. Default is nadeko-mute. **機器人需要`管理身分組`權限** | `.setmuterole Silenced`
 `.mute` | Mutes a mentioned user both from speaking and chatting. You can also specify time in minutes (up to 1440) for how long the user should be muted. **機器人需要`管理身分組`權限** **機器人需要`靜音成員`權限** | `.mute @Someone` 或 `.mute 30 @Someone`
 `.unmute` | Unmutes a mentioned user previously muted with `.mute` command. **機器人需要`管理身分組`權限** **機器人需要`靜音成員`權限** | `.unmute @Someone`
@@ -73,17 +77,17 @@
 `.prefix` | Sets this server's prefix for all bot commands. Provide no arguments to see the current server prefix.  | `.prefix +`
 `.defprefix` | Sets bot's default prefix for all bot commands. Provide no arguments to see the current default prefix. This will not change this server's current prefix. **僅限機器人所有者** | `.defprefix +`
 `.antiraid` | Sets an anti-raid protection on the server. First argument is number of people which will trigger the protection. Second one is a time interval in which that number of people needs to join in order to trigger the protection, and third argument is punishment for those people (Kick, Ban, Mute) **機器人需要`管理員`權限** | `.antiraid 5 20 Kick`
-`.antispam` | Stops people from repeating same message X times in a row. You can specify to either mute, kick or ban the offenders. Max message count is 10. **機器人需要`管理員`權限** | `.antispam 3 Mute` 或 `.antispam 4 Kick` 或 `.antispam 6 Ban`
+`.antispam` | Stops people from repeating same message X times in a row. You can specify to either mute, kick or ban the offenders. If you're using mute, you can add a number of seconds at the end to use a timed mute. Max message count is 10. **機器人需要`管理員`權限** | `.antispam 3 Mute` 或 `.antispam 4 Kick` 或 `.antispam 6 Ban`
 `.antispamignore` | Toggles whether antispam ignores current channel. Antispam must be enabled. **機器人需要`管理員`權限** | `.antispamignore`
 `.antilist` `.antilst` | Shows currently enabled protection features.  | `.antilist`
 `.prune` `.clear` | `.prune` removes all Nadeko's messages in the last 100 messages. `.prune X` removes last `X` number of messages from the channel (up to 100). `.prune @Someone` removes all Someone's messages in the last 100 messages. `.prune @Someone X` removes last `X` number of 'Someone's' messages in the channel.  | `.prune` 或 `.prune 5` 或 `.prune @Someone` 或 `.prune @Someone X`
 `.slowmode` | Toggles slowmode. Disable by specifying no parameters. To enable, specify a number of messages each user can send, and an interval in seconds. For example 1 message every 5 seconds. **機器人需要`管理訊息`權限** | `.slowmode 1 5` 或 `.slowmode`
 `.slowmodewl` | Ignores a role or a user from the slowmode feature. **機器人需要`管理訊息`權限** | `.slowmodewl SomeRole` 或 `.slowmodewl AdminDude`
 `.adsarm` | Toggles the automatic deletion of confirmations for `.iam` and `.iamn` commands. **機器人需要`管理訊息`權限** | `.adsarm`
-`.asar` | Adds a role to the list of self-assignable roles. **機器人需要`管理身分組`權限** | `.asar Gamer`
+`.asar` | Adds a role to the list of self-assignable roles. You can also specify a group. If 'Exclusive self-assignable roles' feature is enabled, users will be able to pick one role per group. **機器人需要`管理身分組`權限** | `.asar Gamer` 或 `.asar 1 Alliance` 或 `.asar 1 Horde`
 `.rsar` | Removes a specified role from the list of self-assignable roles. **機器人需要`管理身分組`權限** | `.rsar`
 `.lsar` | Lists all self-assignable roles.  | `.lsar`
-`.togglexclsar` `.tesar` | Toggles whether the self-assigned roles are exclusive. (So that any person can have only one of the self assignable roles) **機器人需要`管理身分組`權限** | `.tesar`
+`.togglexclsar` `.tesar` | Toggles whether the self-assigned roles are exclusive. While enabled, users can only have one of the self-assignable role per group. **機器人需要`管理身分組`權限** | `.tesar`
 `.iam` | Adds a role to you that you choose. Role must be on a list of self-assignable roles.  | `.iam Gamer`
 `.iamnot` `.iamn` | Removes a specified role from you. Role must be on a list of self-assignable roles.  | `.iamn Gamer`
 `.scadd` | Adds a command to the list of commands which will be executed automatically in the current channel, in the order they were added in, by the bot when it startups up. **僅限機器人所有者** | `.scadd .stats`
@@ -93,8 +97,11 @@
 `.scclr` | Removes all startup commands. **僅限機器人所有者** | `.scclr`
 `.fwmsgs` | Toggles forwarding of non-command messages sent to bot's DM to the bot owners **僅限機器人所有者** | `.fwmsgs`
 `.fwtoall` | Toggles whether messages will be forwarded to all bot owners or only to the first one specified in the credentials.json file **僅限機器人所有者** | `.fwtoall`
+`.shardstats` | Stats for shards. Paginated with 25 shards per page.  | `.shardstats` or `.shardstats 2`
+`.restartshard` | Try (re)connecting a shard with a certain shardid when it dies. No one knows will it work. Keep an eye on the console for errors. **Bot owner only** | `.restartshard 2`
 `.leave` | Makes Nadeko leave the server. Either server name or server ID is required. **僅限機器人所有者** | `.leave 123123123331`
 `.die` | Shuts the bot down. **僅限機器人所有者** | `.die`
+`.restart` | Restarts the bot. Might not work. **Bot owner only** | `.restart`
 `.setname` `.newnm` | Gives the bot a new name. **僅限機器人所有者** | `.newnm BotName`
 `.setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. **機器人需要`更改暱稱`權限** | `.setnick BotNickname` 或 `.setnick @SomeUser New Nickname`
 `.setstatus` | Sets the bot's status. (Online/Idle/Dnd/Invisible) **僅限機器人所有者** | `.setstatus Idle`
@@ -185,7 +192,7 @@
 `.defvol` `.dv` | 設定音樂播放器的預設音量(0-100)；重新啟動Bot後將使用當前預設音量進行播放。 | `.dv 80`
 `.songremove` `.srm` | 以點播列表之編號刪除以點播歌曲，或使用"all"以刪除所有歌曲並重置歌曲索引。 | `.srm 5`
 `.playlists` `.pls` | 列出已儲存的播放清單，每頁20條，預設頁數為0。 | `.pls 1`
-`.deleteplaylist` `.delpls` | 刪除一個已儲存的播放清單，只有在你是該播放清單的製作者或Bot管理員的情況下才可使用。 | `.delpls animu-5`
+`.deleteplaylist` `.delpls` | 依編號刪除一個已儲存的播放清單，只有在你是該播放清單的製作者或Bot管理員的情況下才可使用。 | `.delpls 5`
 `.save` | 取個名字將目前的點播清單儲存起來，名稱必須小於20個字元且不得包含'-'。 | `.save classical1`
 `.load` | 使用清單編號來讀取並播放一個已儲存的播放清單；使用`.pls`可列出所有已保存的播放清單與其編號；使用`.save`可儲存新的播放清單。 | `.load 5`
 `.fairplay` `.fp` | 開啟/關閉公平播放。啟用後，Bot將優先播放"最近沒有點播歌曲"的用戶所點播的歌，而不是依照點播列表的排序播放。 | `.fp`
@@ -256,9 +263,10 @@
 `.race` | 開始一場新的動物賽跑(該比賽並非使用者控制，而是隨機前進；一種碰運氣的遊戲)。 | `.race`
 `.joinrace` `.jr` | 加入一場新的比賽，您可以指定下注金額(可選)。如果您獲勝了，將得到**下注金額x(參與玩家數-1)**。 | `.jr` 或 `.jr 5`
 `.startevent` | 開始一個貨幣贈送活動。目前僅可使用`reaction`和`sneakygamestatus`。 **僅限機器人所有者** | `.startevent reaction`
+`.rafflecur` | Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a `mixed` mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet.  | `.rafflecur 20` or `.rafflecur mixed 15`
 `.roll` | Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd.  | `.roll` 或 `.roll 7` 或 `.roll 3d5` 或 `.roll 5dF`
 `.rolluo` | Rolls `X` normal dice (up to 30) unordered. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`.  | `.rolluo` 或 `.rolluo 7` 或 `.rolluo 3d5`
-`.nroll` | Rolls in a given range.  | `.nroll 5` (rolls 0-5) or `.nroll 5-15`
+`.nroll` | Rolls in a given range. If you specify just one number instead of the range, it will role from 0 to that number.  | `.nroll 5` or `.nroll 5-15`
 `.draw` | Draws a card from the deck.If you supply number X, she draws up to 5 cards from the deck.  | `.draw` 或 `.draw 5`
 `.drawnew` | Draws a card from the NEW deck of cards. You can draw up to 10 cards by supplying a number of cards to draw.  | `.drawnew` 或 `.drawnew 5`
 `.deckshuffle` `.dsh` | Reshuffles all cards back into the deck.  | `.dsh`
@@ -297,6 +305,8 @@
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
 `.lolban` | Shows top banned champions ordered by ban rate.  | `.lolban`
+`.rip` | rip  | `rip`
+`.say` | Bot will send the message you typed in this channel. Supports embeds. **機器人需要`管理訊息`權限** | `.say hi`
 `.weather` `.we` | Shows weather data for a specified city. You can also specify a country after a comma.  | `.we Moscow, RU`
 `.time` | Shows the current time and timezone in the specified location.  | `.time London, UK`
 `.youtube` `.yt` | 在Youtube上搜尋指定字串並回傳第一個結果。 | `.yt query`
@@ -371,7 +381,6 @@
 `.roles` | 列出目前所在伺服器的所有身分組，每頁顯示20個身分組。 | `.roles 2` 或 `.roles @Someone`
 `.channeltopic` `.ct` | 顯示目前所在頻道說明。 | `.ct`
 `.createinvite` `.crinv` | 創建一個不限使用次數與時間的邀請連結。 **機器人需要`建立即時邀請`權限** | `.crinv`
-`.shardstats` | shards 統計資訊。每頁顯示25個 shards。 | `.shardstats` 或 `.shardstats 2`
 `.stats` | 顯示機器人的統計資訊。 | `.stats`
 `.showemojis` `.se` | 顯示訊息中每個伺服器表情符號的名稱與連結。 | `.se A message full of SPECIAL emojis`
 `.listservers` | 列出機器人加入的所有伺服器與其資訊。 **僅限機器人所有者** | `.listservers 3`
@@ -387,7 +396,7 @@
 `.channelinfo` `.cinfo` | Shows info about the channel. If no channel is supplied, it defaults to current one.  | `.cinfo #some-channel`
 `.userinfo` `.uinfo` | Shows info about the user. If no user is supplied, it defaults a user running the command.  | `.uinfo @SomeUser`
 `.activity` | Checks for spammers. **僅限機器人所有者** | `.activity`
-`.parewrel` | Forces the update of the list of patrons who are eligible for the reward. **僅限機器人所有者** | `.parewrel`
+`.parewrel` | Forces the update of the list of patrons who are eligible for the reward. | `.parewrel`
 `.clparew` | Claim patreon rewards. If you're subscribed to bot owner's patreon you can use this command to claim your rewards - assuming bot owner did setup has their patreon key.  | `.clparew`
 `.listquotes` `.liqu` | Lists all quotes on the server ordered alphabetically. 15 Per page.  | `.liqu` 或 `.liqu 3`
 `...` | Shows a random quote with a specified name.  | `... abc`
@@ -416,6 +425,7 @@
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
 `.addcustreact` `.acr` | Add a custom reaction with a trigger and a response. Running this command in server requires the Administration permission. Running this command in DM is Bot Owner only and adds a new global custom reaction. Guide here: <http://ghostbot.readthedocs.io/zh_TW/latest/Custom%20Reactions/>  | `.acr "hello" Hi there %user%`
+`.editcustreact` `.ecr` | Edits the custom reaction's response given its ID.  | `.ecr 123 I'm a magical girl`
 `.listcustreact` `.lcr` | Lists global or server custom reactions (20 commands per page). Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions. Specifying `all` argument instead of the number will DM you a text file with a list of all custom reactions.  | `.lcr 1` 或 `.lcr all`
 `.listcustreactg` `.lcrg` | Lists global or server custom reactions (20 commands per page) grouped by trigger, and show a number of responses for each. Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions.  | `.lcrg 1`
 `.showcustreact` `.scr` | Shows a custom reaction's response on a given ID.  | `.scr 1`
