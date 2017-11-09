@@ -378,7 +378,7 @@
 `.userid` `.uid` | 查看玩家ID。 | `.uid` 或 `.uid @SomeGuy`
 `.channelid` `.cid` | 查看目前所在頻道ID。 | `.cid`
 `.serverid` `.sid` | 查看目前所在伺服器ID。 | `.sid`
-`.roles` | 列出目前所在伺服器的所有身分組，每頁顯示20個身分組。 | `.roles 2` 或 `.roles @Someone`
+`.roles` | 列出目前所在伺服器的所有身分組或指定使用者所擁有的身分組，每頁顯示20個身分組。 | `.roles 2` 或 `.roles @Someone`
 `.channeltopic` `.ct` | 顯示目前所在頻道說明。 | `.ct`
 `.createinvite` `.crinv` | 創建一個不限使用次數與時間的邀請連結。 **機器人需要`建立即時邀請`權限** | `.crinv`
 `.stats` | 顯示機器人的統計資訊。 | `.stats`
