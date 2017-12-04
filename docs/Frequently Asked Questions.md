@@ -27,7 +27,7 @@ If your problem or suggestion is not there, feel free to request/notify us about
 --------
 **Answer:** You can see the description and usage of certain commands by using `.h command` **i.e** `.h .sm`. 
 
-The whole list of commands can be found [here](http://ghostbot.readthedocs.io/zh_TW/latest/Commands%20List/ "Command List")
+The whole list of commands can be found [here](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/ "Command List")
 
 ###Question 7: Music isn't working?
 ----

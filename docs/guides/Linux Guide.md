@@ -73,7 +73,7 @@ You will need the following for the next step:
 ![botimg](https://cdn.discordapp.com/attachments/251504306010849280/276455844223123457/Capture.PNG)
 
 - **Bot's Client ID** and **Bot's ID** (both are same) [(*required)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
-- **Bot's Token** (not client secret) [(*required)](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
+- **Bot's Token** (not client secret) [(*required)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
 - Your **Discord userID** [(*required)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file)
 - **Google Api Key** [(optional)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys)
 - **LoL Api Key** [(optional)](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-api-keys)
@@ -112,10 +112,10 @@ The above command will create a new session named **nadeko** *(you can replace â
 **From the options,**
 
 Choose `2` to **Run NadekoBot normally.**		
-**NOTE:** With option `2` (Running normally), if you use `.die` [command](http://ghostbot.readthedocs.io/zh_TW/latest/Commands%20List/#administration) in discord. The bot will shut down and will stay offline until you manually run it again. (best if you want to check the bot.)
+**NOTE:** With option `2` (Running normally), if you use `.die` [command](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_4) in discord. The bot will shut down and will stay offline until you manually run it again. (best if you want to check the bot.)
 
 Choose `3` to **Run NadekoBot with Auto Restart.**	
-**NOTE:** With option `3` (Running with Auto Restart), bot will auto run if you use `.die` [command](http://ghostbot.readthedocs.io/zh_TW/latest/Commands%20List/#administration) making the command `.die` to function as restart.	
+**NOTE:** With option `3` (Running with Auto Restart), bot will auto run if you use `.die` [command](http://ghostbot.readthedocs.io/zh_TW/latest/Chinese%20Commands%20List/#_4) making the command `.die` to function as restart.	
 
 It will show you the following options: 
 ```

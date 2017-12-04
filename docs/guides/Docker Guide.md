@@ -15,8 +15,8 @@ For Mac [[Download Link](https://download.docker.com/mac/stable/DockerToolbox.pk
 
 ## Prerequisites
 - [Docker](https://store.docker.com/search?type=edition&offering=community) or [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
-- [Create Discord Bot application](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#creating-discord-bot-application) and [Invite the bot to your server](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#inviting-your-bot-to-your-server). 
-- Have your [credentials.json](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-your-credentials) in your home folder. To go to your home folder on ...
+- [Create Discord Bot application](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#creating-discord-bot-application) and [Invite the bot to your server](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#inviting-your-bot-to-your-server). 
+- Have your [credentials.json](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-your-credentials) in your home folder. To go to your home folder on ...
 - Linux: **cd ~**
 - Mac: **⌘ + Shift + H**
 - Windows: Enter **%userprofile%** in your address bar
@@ -102,4 +102,4 @@ This would start the bot and attach the output of the bot on screen, similiar to
 ### Additional Info
 If you have any issues with the docker setup, please ask in #help channel on our [Discord server](https://discordapp.com/invite/nadekobot) but indicate you are using the docker.
 
-For information about configuring your bot or its functionality, please check the [documentation](http://nadekobot.readthedocs.io/en/latest).
+For information about configuring your bot or its functionality, please check the [documentation](http://ghostbot.readthedocs.io/zh_TW/latest).
