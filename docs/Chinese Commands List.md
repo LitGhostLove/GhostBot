@@ -30,7 +30,7 @@
 ### 管理
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
-`.delmsgoncmd` | 開啟/關閉自動刪除成功執行的指令，以防止洗頻。 **機器人需要`管理員`權限** | `.delmsgoncmd`
+`.delmsgoncmd` | Toggles the automatic deletion of the user's successful command message to prevent chat flood. You can use it either as a server toggle, channel whitelist, or channel blacklist, as channel option has 3 settings: Enable (always do it on this channel), Disable (never do it on this channel), and Inherit (respect server setting). Use `list` parameter to see the current states. **機器人需要`管理員`權限** | `.delmsgoncmd` or `.delmsgoncmd channel enable` or `.delmsgoncmd channel inherit` or `.delmsgoncmd list`
 `.setrole` `.sr` | 給予一名玩家指定的身分組。 **機器人需要`管理身分組`權限** | `.sr @User Guest`
 `.removerole` `.rr` | 移除一名玩家指定的身分組。 **機器人需要`管理身分組`權限** | `.rr @User Admin`
 `.renamerole` `.renr` | 重新命名身分組。重新命名的身分組權限必須低於機器人所擁有的最高身分組。 **機器人需要`管理身分組`權限** | `.renr "First role" SecondRole`
@@ -88,6 +88,7 @@
 `.rsar` | Removes a specified role from the list of self-assignable roles. **機器人需要`管理身分組`權限** | `.rsar`
 `.lsar` | Lists all self-assignable roles.  | `.lsar`
 `.togglexclsar` `.tesar` | Toggles whether the self-assigned roles are exclusive. While enabled, users can only have one of the self-assignable role per group. **機器人需要`管理身分組`權限** | `.tesar`
+`.rolelevelreq` `.rlr` | Set a level requirement on a self-assignable role. **機器人需要`管理身分組`權限** | `.rlr 5 SomeRole`
 `.iam` | Adds a role to you that you choose. Role must be on a list of self-assignable roles.  | `.iam Gamer`
 `.iamnot` `.iamn` | Removes a specified role from you. Role must be on a list of self-assignable roles.  | `.iamn Gamer`
 `.scadd` | Adds a command to the list of commands which will be executed automatically in the current channel, in the order they were added in, by the bot when it startups up. **僅限機器人所有者** | `.scadd .stats`
@@ -106,10 +107,11 @@
 `.setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. **機器人需要`更改暱稱`權限** | `.setnick BotNickname` 或 `.setnick @SomeUser New Nickname`
 `.setstatus` | Sets the bot's status. (Online/Idle/Dnd/Invisible) **僅限機器人所有者** | `.setstatus Idle`
 `.setavatar` `.setav` | Sets a new avatar image for the NadekoBot. Argument is a direct link to an image. **僅限機器人所有者** | `.setav http://i.imgur.com/xTG3a1I.jpg`
-`.setgame` | Sets the bots game. **僅限機器人所有者** | `.setgame with snakes`
+`.setgame` | Sets the bots game status to either Playing, ListeningTo, or Watching. **僅限機器人所有者** | `.setgame Playing with snakes.` 或 `.setgame Watching anime.` 或 `.setgame ListeningTo music.`
 `.setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **僅限機器人所有者** | `.setstream TWITCHLINK Hello`
 `.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **僅限機器人所有者** | `.send serverid|c:channelid message` 或 `.send serverid|u:userid message`
 `.reloadimages` | Reloads images bot is using. Safe to use even when bot is being used heavily. **僅限機器人所有者** | `.reloadimages`
+`.reloadbotconfig` | reloadbotconfig **僅限機器人所有者** | `reloadbotconfig`
 `.greetdel` `.grdel` | Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. **機器人需要`管理伺服器`權限** | `.greetdel 0` 或 `.greetdel 30`
 `.greet` | Toggles anouncements on the current channel when someone joins the server. **機器人需要`管理伺服器`權限** | `.greet`
 `.greetmsg` | Sets a new join announcement message which will be shown in the server's channel. Type `%user%` if you want to mention the new member. Using it with no message will show the current greet message. You can use embed json from <http://nadekobot.me/embedbuilder/> instead of a regular text, if you want the message to be embedded. **機器人需要`管理伺服器`權限** | `.greetmsg Welcome, %user%.`
@@ -130,6 +132,7 @@
 `.unban` | Unbans a user with the provided user#discrim or id. **機器人需要`封鎖成員`權限** | `.unban kwoth#1234` 或 `.unban 123123123`
 `.softban` `.sb` | Bans and then unbans a user by ID or name with an optional message. **機器人需要`踢除成員`權限** **機器人需要`管理訊息`權限** | `.sb "@some Guy" Your behaviour is toxic.`
 `.kick` `.k` | Kicks a mentioned user. **機器人需要`踢除成員`權限** | `.k "@some Guy" Your behaviour is toxic.`
+`.masskill` | Specify a new-line separated list of `userid reason`. You can use Username#discrim instead of UserId. Specified users will be banned from the current server, blacklisted from the bot, and have all of their flowers taken away. **機器人需要`封鎖成員`權限** **僅限機器人所有者** | `.masskill BadPerson#1234 Toxic person`
 `.vcrole` | Sets or resets a role which will be given to users who join the voice channel you're in when you run this command. Provide no role name to disable. You must be in a voice channel to run this command. **機器人需要`管理身分組`權限** **機器人需要`管理頻道`權限** | `.vcrole SomeRole` 或 `.vcrole`
 `.vcrolelist` | Shows a list of currently set voice channel roles.  | `.vcrolelist`
 `.voice+text` `.v+t` | Creates a text channel for each voice channel only users in that voice channel can see. If you are server owner, keep in mind you will see them all the time regardless. **機器人需要`管理身分組`權限** **機器人需要`管理頻道`權限** | `.v+t`
@@ -186,6 +189,7 @@
 `.listqueue` `.lq` | 顯示已點播歌曲列表，每頁10條，預設頁數為1 (歌曲編號請使用該命令查詢)。 | `.lq` 或 `.lq 2`
 `.next` `.n` | 播放點播列表中的下一首歌曲，你必須與Bot處於同一個語音頻道；你也可以同時跳過多首歌曲，若以啟用單曲循環`.rcs`或所有歌曲循環`.rpl`，歌曲將不會被重新排列。  | `.n` 或 `.n 5`
 `.stop` `.s` | 停止播放音樂並保留當前以點播歌曲(未播放完畢之歌曲將一同保留)。機器人將留在語音頻道內。 | `.s`
+`.autodisconnect` `.autodc` | Toggles whether the bot should disconnect from the voice channel once it's done playing all of the songs.  | `.autodc`
 `.destroy` `.d` | 停止播放歌曲並使Bot離開當前語音頻道(可能會發生奇怪的事情)。 | `.d`
 `.pause` `.p` | 暫停或取消暫停播放歌曲。 | `.p`
 `.volume` `.vol` | 設定播放音量(0-100%)。 | `.vol 50`
@@ -213,6 +217,7 @@
 `.rpeatplaylst` `.rpl` | 開啟/關閉所有歌曲循環播放 (當一首歌曲播放完畢時，自動重新點播該歌曲至點播列表後)。 | `.rpl`
 `.autoplay` `.ap` | 開啟/關閉自動播放 - 歌曲播放完畢後自動點播相關影片。(僅適用於播放Youtube歌曲，且點播列表無任何歌曲時才會作用) | `.ap`
 `.setmusicchannel` `.smch` | 將目前文字頻道設為音樂訊息輸出頻道。這將輸出播放、結束、暫停和刪除的音樂訊息到當前文字頻道。 **機器人需要`管理訊息`權限** | `.smch`
+`.unsetmusicchannel` `.usmch` | Bot will output playing, finished, paused and removed songs to the channel where the first song was queued in. **機器人需要`管理訊息`權限** | `.smch`
 
 ###### [回目錄](#_1)
 
@@ -225,7 +230,7 @@
 `.rategirl` | Use the universal hot-crazy wife zone matrix to determine the girl's worth. It is everything young men need to know about women. At any moment in time, any woman you have previously located on this chart can vanish from that location and appear anywhere else on the chart.  | `.rategirl @SomeGurl`
 `.linux` | Prints a customizable Linux interjection  | `.linux Spyware Windows`
 `.leet` | Converts a text to leetspeak with 6 (1-6) severity levels  | `.leet 3 Hello`
-`.acrophobia` `.acro` | Starts an Acrophobia game. Second argument is optional round length in seconds. (default is 60)  | `.acro` 或 `.acro 30`
+`.acrophobia` `.acro` | Starts an Acrophobia game.  | `.acro` 或 `.acro -s 30`
 `.cleverbot` | Toggles cleverbot session. When enabled, the bot will reply to messages starting with bot mention in the server. Custom reactions starting with %mention% won't work if cleverbot is enabled. **機器人需要`管理訊息`權限** | `.cleverbot`
 `.connect4` `.con4` | Creates or joins an existing connect4 game. 2 players are required for the game. Objective of the game is to get 4 of your pieces next to each other in a vertical, horizontal or diagonal line.  | `.connect4`
 `.hangmanlist` | Shows a list of hangman term types. | `. hangmanlist`
@@ -242,9 +247,9 @@
 `.typestop` | Stops a typing contest on the current channel.  | `.typestop`
 `.typeadd` | Adds a new article to the typing contest. **僅限機器人所有者** | `.typeadd wordswords`
 `.typelist` | Lists added typing articles with their IDs. 15 per page.  | `.typelist` 或 `.typelist 3`
-`.typedel` | Deletes a typing article given the ID. **僅限機器人所有者** | `.typedel 3`
-`.tictactoe` `.ttt` | Starts a game of tic tac toe. Another user must run the command in the same channel in order to accept the challenge. Use numbers 1-9 to play. 15 seconds per move.  | .ttt
-`.trivia` `.t` | Starts a game of trivia. You can add `nohint` to prevent hints. First player to get to 10 points wins by default. You can specify a different number. 30 seconds per question.  | `.t` 或 `.t 5 nohint`
+`.typedel` | Deletes a typing article given the ID. **Bot owner only** | `.typedel 3`
+`.tictactoe` `.ttt` | Starts a game of tic tac toe. Another user must run the command in the same channel in order to accept the challenge. Use numbers 1-9 to play.  | `.ttt`
+`.trivia` `.t` | Starts a game of trivia. You can add `nohint` to prevent hints. First player to get to 10 points wins by default. You can specify a different number. 30 seconds per question.  | `.t` or `.t --timeout 5 -p -w 3 -q 10`
 `.tl` | Shows a current trivia leaderboard.  | `.tl`
 `.tq` | Quits current trivia after current question.  | `.tq`
 
@@ -253,11 +258,16 @@
 ### 賭博
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
-`.raffle` | 從線上成員(身分組)中隨機抽出一名成員並顯示其名稱與ID。 | `.raffle` 或 `.raffle RoleName`
+`.timely` | Use to claim your 'timely' currency. Bot owner has to specify the amount and the period on how often you can claim your currency.  | `.timely`
+`.timelyreset` | Resets all user timeouts on `.timely` command. **Bot owner only** | `.timelyreset`
+`.timelyset` | Sets the 'timely' currency allowance amount for users. Second argument is period in hours, default is 24 hours. **僅限機器人所有者** | `.timelyset 100` or `.timelyset 50 12`
+`.raffle` | Prints a name and ID of a random online user from the server, or from the online user in the specified role.  | `.raffle` or `.raffle RoleName`
+`.raffleany` | Prints a name and ID of a random user from the server, or from the specified role.  | `.raffleany` or `.raffleany  RoleName`
 `.$` `currency` `.$$` `.$$` `cash` `cur` | 查看自己或他人目前擁有多少貨幣 (預設為查看自己)。 | `.$` 或 `.$ @SomeGuy`
 `.give` | 給予他人貨幣。 | `.give 1 @SomeGuy`
-`.award` | 給予某位成員一定數量的貨幣。您還可以指定一個身分組，已將貨幣贈與該身分組中的所有成員。 **僅限機器人所有者** | `.award 100 @person` 或 `.award 5 Role Of Gamblers`
-`.take` | 取走某位成員一定數量的貨幣。 **僅限機器人所有者** | `.take 1 @someguy`
+`.award` | Awards someone a certain amount of currency.  You can also specify a role name to award currency to all users in a role. **僅限機器人所有者** | `.award 100 @person` or `.award 5 Role Of Gamblers`
+`.take` | Takes a certain amount of currency from someone. **Bot owner only** | `.take 1 @SomeGuy`
+`.rollduel` | Challenge someone to a roll duel by specifying the amount and the user you wish to challenge as the parameters. To accept the challenge, just specify the name of the user who challenged you, without the amount.  | `.rollduel 50 @SomeGuy` or `.rollduel @Challenger`
 `.betroll` `.br` | 投注一定數量的貨幣並擲骰子。骰子點數超過66將會有2倍的獎勵、超過90會有4倍、100則會有10倍 | `.br 5`
 `.leaderboard` `.lb` | 顯示機器人使用者的貨幣排行榜。 | `.lb`
 `.race` | 開始一場新的動物賽跑(該比賽並非使用者控制，而是隨機前進；一種碰運氣的遊戲)。 | `.race`
@@ -271,7 +281,7 @@
 `.drawnew` | Draws a card from the NEW deck of cards. You can draw up to 10 cards by supplying a number of cards to draw.  | `.drawnew` 或 `.drawnew 5`
 `.deckshuffle` `.dsh` | Reshuffles all cards back into the deck.  | `.dsh`
 `.flip` | 翻硬幣 - 人頭(heads)或字(tails)，並顯示其圖像。 | `.flip` 或 `.flip 3`
-`.betflip` `.bf` | 翻硬幣並猜其結果，人頭(heads)或字(tails)。猜中後將獎勵你**下注金額x1.95(四捨五入)**。機器人擁有者可更改乘數。 | `.bf 5 heads` 或 `.bf 3 t`
+`.betflip` `.bf` | 翻硬幣並猜其結果，人頭(heads)或字(tails)。猜中後將獎勵你**下注金額x1.95(四捨五入)**。機器人所有者可更改乘數。 | `.bf 5 heads` 或 `.bf 3 t`
 `.shop` | 列出這個伺服器上的商店。 | `.shop` 或 `.shop 2`
 `.buy` | 根據輸入的編號在商店上購買一個商品。購買商品前請確保機器人可以私訊您。 | `.buy 2`
 `.shopadd` | Adds an item to the shop by specifying type price and name. Available types are role and list. **機器人需要`管理員`權限** | `.shopadd role 1000 Rich`
@@ -280,6 +290,7 @@
 `.slotstats` | 顯示此機器人的吃角子老虎機統計資訊。 **僅限機器人所有者** | `.slotstats`
 `.slottest` | Tests to see how much slots payout for X number of plays. **僅限機器人所有者** | `.slottest 1000`
 `.slot` | 玩吃角子老虎。最大下注金額為**9999**，每位使用者有1.5秒的冷卻時間。 | `.slot 5`
+`.waifureset` | Resets your waifu stats, except current waifus.  | `.waifureset`
 `.claimwaifu` `.claim` | Claim a waifu for yourself by spending currency.  You must spend at least 10% more than her current value unless she set `.affinity` towards you.  | `.claim 50 @Himesama`
 `.divorce` | Releases your claim on a specific waifu. You will get some of the money you've spent back unless that waifu has an affinity towards you. 6 hours cooldown.  | `.divorce @CheatingSloot`
 `.affinity` | Sets your affinity towards someone you want to be claimed by. Setting affinity will reduce their `.claim` on you by 20%. You can leave second argument empty to clear your affinity. 30 minutes cooldown.  | `.affinity @MyHusband` 或 `.affinity`
@@ -305,6 +316,7 @@
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
 `.lolban` | Shows top banned champions ordered by ban rate.  | `.lolban`
+`.crypto` `.c` | Shows basic stats about a cryptocurrency from coinmarketcap.com. You can use either a name or an abbreviation of the currency.  | `.c btc` 或 `.c bitcoin`
 `.rip` | rip  | `rip`
 `.say` | Bot will send the message you typed in this channel. Supports embeds. **機器人需要`管理訊息`權限** | `.say hi`
 `.weather` `.we` | Shows weather data for a specified city. You can also specify a country after a comma.  | `.we Moscow, RU`
@@ -333,6 +345,7 @@
 `.videocall` | Creates a private <http://www.appear.in> video call link for you and other mentioned people. The link is sent to mentioned people via a private message.  | `.videocall "@the First" "@Xyz"`
 `.avatar` `.av` | Shows a mentioned person's avatar.  | `.av @SomeGuy`
 `.wikia` | Gives you back a wikia link  | `.wikia mtg Vigilance` 或 `.wikia mlp Dashy`
+`.novel` | Searches for a novel on `http://novelupdates.com/`. You have to provide an exact name.  | `.novel the nine cauldrons`
 `.mal` | Shows basic info from a MyAnimeList profile.  | `.mal straysocks`
 `.anime` `.ani` `.aq` | Queries anilist for an anime and shows the first result.  | `.ani aquarion evol`
 `.manga` `.mang` `.mq` | Queries anilist for a manga and shows the first result.  | `.mq Shingeki no kyojin`
@@ -354,9 +367,10 @@
 `.place` | Shows a placeholder image of a given tag. Use `.placelist` to see all available tags. You can specify the width and height of the image as the last two optional arguments.  | `.place Cage` 或 `.place steven 500 400`
 `.pokemon` `.poke` | Searches for a pokemon.  | `.poke Sylveon`
 `.pokemonability` `.pokeab` | Searches for a pokemon ability.  | `.pokeab overgrow`
-`.smashcast` `.hb` | Notifies this channel when a certain user starts streaming. **機器人需要`管理訊息`權限** | `.smashcast SomeStreamer`
-`.twitch` `.tw` | 當特定的Twitch頻道開播時在當前頻道發送通知訊息。 **機器人需要`管理訊息`權限** | `.twitch SomeStreamer`
-`.mixer` `.bm` | Notifies this channel when a certain user starts streaming. **機器人需要`管理訊息`權限** | `.mixer SomeStreamer`
+`.smashcast` `.hb` | Notifies this channel when the specified user starts streaming. **機器人需要`管理訊息`權限** | `.smashcast SomeStreamer`
+`.twitch` `.tw` | Notifies this channel when the specified user starts streaming. **機器人需要`管理訊息`權限** | `.twitch SomeStreamer`
+`.picarto` `.pa` | Notifies this channel when the specified user starts streaming. **機器人需要`管理訊息`權限** | `.picarto SomeStreamer`
+`.mixer` `.bm` | Notifies this channel when the specified user starts streaming. **機器人需要`管理訊息`權限** | `.mixer SomeStreamer`
 `.liststreams` `.ls` | 列出當前已開啟開播通知的直播頻道。 | `.ls`
 `.removestream` `.rms` | 取消發送特定直播頻道開播時的通知訊息。 **機器人需要`管理訊息`權限** | `.rms Twitch SomeGuy` 或 `.rms mixer SomeOtherGuy`
 `.checkstream` `.cs` | Checks if a user is online on a certain streaming platform.  | `.cs twitch MyFavStreamer`
@@ -374,7 +388,7 @@
 `.togethertube` `.totube` | 在 <https://togethertube.com> 創建一間新的房間並發送連結至當前頻道。 | `.totube`
 `.whosplaying` `.whpl` | 顯示正在遊玩指定遊戲的使用者列表。 | `.whpl Overwatch`
 `.inrole` | 列出當前伺服器上特定身分組的使用者。您可以使用身分組ID、身分組名稱。 | `.inrole Some Role`
-`.checkmyperms` | 檢視當前頻道上的使用者特定權限。 | `.checkmyperms`
+`.checkperms` | Checks yours or bot's user-specific permissions on this channel.  | `.checkperms me` 或 `.checkperms bot`
 `.userid` `.uid` | 查看玩家ID。 | `.uid` 或 `.uid @SomeGuy`
 `.channelid` `.cid` | 查看目前所在頻道ID。 | `.cid`
 `.serverid` `.sid` | 查看目前所在伺服器ID。 | `.sid`
@@ -398,7 +412,7 @@
 `.activity` | Checks for spammers. **僅限機器人所有者** | `.activity`
 `.parewrel` | Forces the update of the list of patrons who are eligible for the reward. | `.parewrel`
 `.clparew` | Claim patreon rewards. If you're subscribed to bot owner's patreon you can use this command to claim your rewards - assuming bot owner did setup has their patreon key.  | `.clparew`
-`.listquotes` `.liqu` | Lists all quotes on the server ordered alphabetically. 15 Per page.  | `.liqu` 或 `.liqu 3`
+`.listquotes` `.liqu` | Lists all quotes on the server ordered alphabetically or by ID. 15 Per page.  | `.liqu 3` 或 `.liqu 3 id`
 `...` | Shows a random quote with a specified name.  | `... abc`
 `.qsearch` | Shows a random quote for a keyword that contains any text specified in the search.  | `.qsearch keyword text`
 `.quoteid` `.qid` | Displays the quote with the specified ID number. Quote ID numbers can be found by typing `.liqu [num]` where `[num]` is a number of a page which contains 15 quotes.  | `.qid 123456`
@@ -433,7 +447,7 @@
 `.crca` | Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it).  | `.crca 44`
 `.crdm` | Toggles whether the response message of the custom reaction will be sent as a direct message.  | `.crdm 44`
 `.crad` | Toggles whether the message triggering the custom reaction will be automatically deleted.  | `.crad 59`
-`.crstatsclear` | 重置 `.crstats` 上的計數器。您可以指定清除特定觸發文字的統計資訊。僅限機器人擁有者。 **僅限機器人所有者** | `.crstatsclear` 或 `.crstatsclear rng`
+`.crstatsclear` | 重置 `.crstats` 上的計數器。您可以指定清除特定觸發文字的統計資訊。僅限機器人所有者。 **僅限機器人所有者** | `.crstatsclear` 或 `.crstatsclear rng`
 `.crstats` | Shows a list of custom reactions and the number of times they have been executed. Paginated with 10 per page. Use `.crstatsclear` to reset the counters.  | `.crstats` 或 `.crstats 3`
 
 ###### [回目錄](#_1)
@@ -442,14 +456,16 @@
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
 `.experience` `.xp` | 顯示您的xp統計資訊。指定用戶可顯示該用戶的統計資訊。 | `.xp`
-`.xprolerewards` `.xprrs` | 顯示當前伺服器的身分組獎勵。 | `.xprrs`
+`.xplvluprewards` `.xprews` `.xpcrs` `.xprrs` `.xprolerewards` `.xpcurrewards` | Shows currently set level up rewards.  | `.xprews`
 `.xprolereward` `.xprr` | 在指定級別設置身分組獎勵。不提供身分組名稱以刪除身分組獎勵。 **機器人需要`管理身分組`權限** | `.xprr 3 Social`
+`.xpcurreward` `.xpcr` | Sets a currency reward on a specified level. Provide no amount in order to remove the reward. **僅限機器人所有者** | `.xpcr 3 50`
 `.xpnotify` `.xpn` | 設定Bot在你的"伺服器"或"全球"等級升級時應該如何通知您。您可以設定`dm`(機器人發送私訊通知)、`channel`(在您發送最後一則訊息的頻道通知)或`none`關閉通知。 | `.xpn global dm` 或 `.xpn server channel`
 `.xpexclude` `.xpex` | 將特定頻道、身分組或當前伺服器排除於xp系統之外。 **機器人需要`管理員`權限** | `.xpex Role Excluded-Role` 或 `.xpex Server`
 `.xpexclusionlist` `.xpexl` | 顯示當前伺服器上被排除在xp系統之外的身分組和頻道，以及整個伺服器是否被排除。 | `.xpexl`
 `.xpleaderboard` `.xplb` | 顯示當前伺服器的xp排行榜。 | `.xplb`
 `.xpgleaderboard` `.xpglb` | 顯示全球xp排行榜。 | `.xpglb`
 `.xpadd` | 為伺服器上的成員增加xp。這並不影響他們的全球排名。您可以使用負值。 **機器人需要`管理員`權限** | `.xpadd 100 @b1nzy`
+`.clubtransfer` | Transfers the ownership of the club to another member of the club.  | `.clubtransfer @b1nzy`
 `.clubadmin` | 分配(或取消分配)員工身分組給俱樂部成員。管理員可以封鎖、踢除和接受申請。 | `.clubadmin`
 `.clubcreate` | 創建一個俱樂部。您的等級必須為5以上，且不再一個俱樂部中。 | `.clubcreate b1nzy's friends`
 `.clubicon` | 設定俱樂部圖示。 | `.clubicon https://i.imgur.com/htfDMfU.png`
