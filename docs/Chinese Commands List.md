@@ -30,7 +30,7 @@
 ### 管理
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
-`.delmsgoncmd` | Toggles the automatic deletion of the user's successful command message to prevent chat flood. You can use it either as a server toggle, channel whitelist, or channel blacklist, as channel option has 3 settings: Enable (always do it on this channel), Disable (never do it on this channel), and Inherit (respect server setting). Use `list` parameter to see the current states. **機器人需要`管理員`權限** | `.delmsgoncmd` or `.delmsgoncmd channel enable` or `.delmsgoncmd channel inherit` or `.delmsgoncmd list`
+`.delmsgoncmd` | 開啟/關閉 自動刪除已成功運行的指令，用以防止洗頻。您可將其用於切換伺服器啟用狀態，或更改特定頻道啟用狀態，用於頻道時有三個選項：`Enable`(在此頻道上啟用功能)、`Disable`(在此頻道上停用功能)、`Inherit`(跟隨伺服器設定)。可使用`list`來查看當前狀態。 **機器人需要`管理員`權限** | `.delmsgoncmd` 或 `.delmsgoncmd channel enable` 或 `.delmsgoncmd channel inherit` 或 `.delmsgoncmd list`
 `.setrole` `.sr` | 給予一名玩家指定的身分組。 **機器人需要`管理身分組`權限** | `.sr @User Guest`
 `.removerole` `.rr` | 移除一名玩家指定的身分組。 **機器人需要`管理身分組`權限** | `.rr @User Admin`
 `.renamerole` `.renr` | 重新命名身分組。重新命名的身分組權限必須低於機器人所擁有的最高身分組。 **機器人需要`管理身分組`權限** | `.renr "First role" SecondRole`
@@ -98,7 +98,7 @@
 `.scclr` | Removes all startup commands. **僅限機器人所有者** | `.scclr`
 `.fwmsgs` | Toggles forwarding of non-command messages sent to bot's DM to the bot owners **僅限機器人所有者** | `.fwmsgs`
 `.fwtoall` | Toggles whether messages will be forwarded to all bot owners or only to the first one specified in the credentials.json file **僅限機器人所有者** | `.fwtoall`
-`.shardstats` | Stats for shards. Paginated with 25 shards per page.  | `.shardstats` or `.shardstats 2`
+`.shardstats` | Stats for shards. Paginated with 25 shards per page.  | `.shardstats` 或 `.shardstats 2`
 `.restartshard` | Try (re)connecting a shard with a certain shardid when it dies. No one knows will it work. Keep an eye on the console for errors. **Bot owner only** | `.restartshard 2`
 `.leave` | Makes Nadeko leave the server. Either server name or server ID is required. **僅限機器人所有者** | `.leave 123123123331`
 `.die` | Shuts the bot down. **僅限機器人所有者** | `.die`
@@ -189,7 +189,7 @@
 `.listqueue` `.lq` | 顯示已點播歌曲列表，每頁10條，預設頁數為1 (歌曲編號請使用該命令查詢)。 | `.lq` 或 `.lq 2`
 `.next` `.n` | 播放點播列表中的下一首歌曲，你必須與Bot處於同一個語音頻道；你也可以同時跳過多首歌曲，若以啟用單曲循環`.rcs`或所有歌曲循環`.rpl`，歌曲將不會被重新排列。  | `.n` 或 `.n 5`
 `.stop` `.s` | 停止播放音樂並保留當前以點播歌曲(未播放完畢之歌曲將一同保留)。機器人將留在語音頻道內。 | `.s`
-`.autodisconnect` `.autodc` | Toggles whether the bot should disconnect from the voice channel once it's done playing all of the songs.  | `.autodc`
+`.autodisconnect` `.autodc` | 開啟/關閉 機器人於所有音樂播放完畢後自動離開語音頻道。 | `.autodc`
 `.destroy` `.d` | 停止播放歌曲並使Bot離開當前語音頻道(可能會發生奇怪的事情)。 | `.d`
 `.pause` `.p` | 暫停或取消暫停播放歌曲。 | `.p`
 `.volume` `.vol` | 設定播放音量(0-100%)。 | `.vol 50`
@@ -217,7 +217,7 @@
 `.rpeatplaylst` `.rpl` | 開啟/關閉所有歌曲循環播放 (當一首歌曲播放完畢時，自動重新點播該歌曲至點播列表後)。 | `.rpl`
 `.autoplay` `.ap` | 開啟/關閉自動播放 - 歌曲播放完畢後自動點播相關影片。(僅適用於播放Youtube歌曲，且點播列表無任何歌曲時才會作用) | `.ap`
 `.setmusicchannel` `.smch` | 將目前文字頻道設為音樂訊息輸出頻道。這將輸出播放、結束、暫停和刪除的音樂訊息到當前文字頻道。 **機器人需要`管理訊息`權限** | `.smch`
-`.unsetmusicchannel` `.usmch` | Bot will output playing, finished, paused and removed songs to the channel where the first song was queued in. **機器人需要`管理訊息`權限** | `.smch`
+`.unsetmusicchannel` `.usmch` | 機器人將於第一次點播歌曲的頻道輸出播放、結束、暫停和刪除等音樂訊息。 **機器人需要`管理訊息`權限** | `.smch`
 
 ###### [回目錄](#_1)
 
@@ -249,7 +249,7 @@
 `.typelist` | Lists added typing articles with their IDs. 15 per page.  | `.typelist` 或 `.typelist 3`
 `.typedel` | Deletes a typing article given the ID. **Bot owner only** | `.typedel 3`
 `.tictactoe` `.ttt` | Starts a game of tic tac toe. Another user must run the command in the same channel in order to accept the challenge. Use numbers 1-9 to play.  | `.ttt`
-`.trivia` `.t` | Starts a game of trivia. You can add `nohint` to prevent hints. First player to get to 10 points wins by default. You can specify a different number. 30 seconds per question.  | `.t` or `.t --timeout 5 -p -w 3 -q 10`
+`.trivia` `.t` | Starts a game of trivia. You can add `nohint` to prevent hints. First player to get to 10 points wins by default. You can specify a different number. 30 seconds per question.  | `.t` 或 `.t --timeout 5 -p -w 3 -q 10`
 `.tl` | Shows a current trivia leaderboard.  | `.tl`
 `.tq` | Quits current trivia after current question.  | `.tq`
 
@@ -260,23 +260,23 @@
 ----------------|--------------|-------
 `.timely` | Use to claim your 'timely' currency. Bot owner has to specify the amount and the period on how often you can claim your currency.  | `.timely`
 `.timelyreset` | Resets all user timeouts on `.timely` command. **Bot owner only** | `.timelyreset`
-`.timelyset` | Sets the 'timely' currency allowance amount for users. Second argument is period in hours, default is 24 hours. **僅限機器人所有者** | `.timelyset 100` or `.timelyset 50 12`
-`.raffle` | Prints a name and ID of a random online user from the server, or from the online user in the specified role.  | `.raffle` or `.raffle RoleName`
-`.raffleany` | Prints a name and ID of a random user from the server, or from the specified role.  | `.raffleany` or `.raffleany  RoleName`
+`.timelyset` | Sets the 'timely' currency allowance amount for users. Second argument is period in hours, default is 24 hours. **僅限機器人所有者** | `.timelyset 100` 或 `.timelyset 50 12`
+`.raffle` | Prints a name and ID of a random online user from the server, or from the online user in the specified role.  | `.raffle` 或 `.raffle RoleName`
+`.raffleany` | Prints a name and ID of a random user from the server, or from the specified role.  | `.raffleany` 或 `.raffleany  RoleName`
 `.$` `currency` `.$$` `.$$` `cash` `cur` | 查看自己或他人目前擁有多少貨幣 (預設為查看自己)。 | `.$` 或 `.$ @SomeGuy`
 `.give` | 給予他人貨幣。 | `.give 1 @SomeGuy`
-`.award` | Awards someone a certain amount of currency.  You can also specify a role name to award currency to all users in a role. **僅限機器人所有者** | `.award 100 @person` or `.award 5 Role Of Gamblers`
+`.award` | Awards someone a certain amount of currency.  You can also specify a role name to award currency to all users in a role. **僅限機器人所有者** | `.award 100 @person` 或 `.award 5 Role Of Gamblers`
 `.take` | Takes a certain amount of currency from someone. **Bot owner only** | `.take 1 @SomeGuy`
-`.rollduel` | Challenge someone to a roll duel by specifying the amount and the user you wish to challenge as the parameters. To accept the challenge, just specify the name of the user who challenged you, without the amount.  | `.rollduel 50 @SomeGuy` or `.rollduel @Challenger`
+`.rollduel` | Challenge someone to a roll duel by specifying the amount and the user you wish to challenge as the parameters. To accept the challenge, just specify the name of the user who challenged you, without the amount.  | `.rollduel 50 @SomeGuy` 或 `.rollduel @Challenger`
 `.betroll` `.br` | 投注一定數量的貨幣並擲骰子。骰子點數超過66將會有2倍的獎勵、超過90會有4倍、100則會有10倍 | `.br 5`
 `.leaderboard` `.lb` | 顯示機器人使用者的貨幣排行榜。 | `.lb`
 `.race` | 開始一場新的動物賽跑(該比賽並非使用者控制，而是隨機前進；一種碰運氣的遊戲)。 | `.race`
 `.joinrace` `.jr` | 加入一場新的比賽，您可以指定下注金額(可選)。如果您獲勝了，將得到**下注金額x(參與玩家數-1)**。 | `.jr` 或 `.jr 5`
 `.startevent` | 開始一個貨幣贈送活動。目前僅可使用`reaction`和`sneakygamestatus`。 **僅限機器人所有者** | `.startevent reaction`
-`.rafflecur` | Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a `mixed` mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet.  | `.rafflecur 20` or `.rafflecur mixed 15`
+`.rafflecur` | Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a `mixed` mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet.  | `.rafflecur 20` 或 `.rafflecur mixed 15`
 `.roll` | Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd.  | `.roll` 或 `.roll 7` 或 `.roll 3d5` 或 `.roll 5dF`
 `.rolluo` | Rolls `X` normal dice (up to 30) unordered. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`.  | `.rolluo` 或 `.rolluo 7` 或 `.rolluo 3d5`
-`.nroll` | Rolls in a given range. If you specify just one number instead of the range, it will role from 0 to that number.  | `.nroll 5` or `.nroll 5-15`
+`.nroll` | Rolls in a given range. If you specify just one number instead of the range, it will role from 0 to that number.  | `.nroll 5` 或 `.nroll 5-15`
 `.draw` | Draws a card from the deck.If you supply number X, she draws up to 5 cards from the deck.  | `.draw` 或 `.draw 5`
 `.drawnew` | Draws a card from the NEW deck of cards. You can draw up to 10 cards by supplying a number of cards to draw.  | `.drawnew` 或 `.drawnew 5`
 `.deckshuffle` `.dsh` | Reshuffles all cards back into the deck.  | `.dsh`
