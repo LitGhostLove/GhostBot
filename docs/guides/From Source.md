@@ -13,7 +13,7 @@
 
 #### Getting Nadeko Ready to Run  
 `git clone -b 1.9 https://github.com/Kwoth/NadekoBot`  
-- Edit the `credentials.json` in `NadekoBot/src/NadekoBot` according to this [guide](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/#setting-up-credentialsjson-file).  
+- Edit the `credentials.json` in `NadekoBot/src/NadekoBot` according to this [guide](http://ghostbot.readthedocs.io/zh_TW/latest/JSON%20Explanations/#setting-up-credentialsjson-file).  
 - Move `youtube-dl.exe` and `ffmpeg.exe` into `NadekoBot/src/NadekoBot`. For 32-bit Windows, also replace `libsodium.dll` and `opus.dll` with the ones you downloaded.   
 
 #### Running NadekoBot  
