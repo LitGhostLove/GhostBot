@@ -31,13 +31,6 @@
 指令與簡寫 | 說明 | 用法
 ----------------|--------------|-------
 `.delmsgoncmd` | 開啟/關閉 自動刪除已成功運行的指令，用以防止洗頻。您可將其用於切換伺服器啟用狀態，或更改特定頻道啟用狀態，用於頻道時有三個選項：`Enable`(在此頻道上啟用功能)、`Disable`(在此頻道上停用功能)、`Inherit`(跟隨伺服器設定)。可使用`list`來查看當前狀態。 **機器人需要`管理員`權限** | `.delmsgoncmd` 或 `.delmsgoncmd channel enable` 或 `.delmsgoncmd channel inherit` 或 `.delmsgoncmd list`
-`.setrole` `.sr` | 給予一名玩家指定的身分組。 **機器人需要`管理身分組`權限** | `.sr @User Guest`
-`.removerole` `.rr` | 移除一名玩家指定的身分組。 **機器人需要`管理身分組`權限** | `.rr @User Admin`
-`.renamerole` `.renr` | 重新命名身分組。重新命名的身分組權限必須低於機器人所擁有的最高身分組。 **機器人需要`管理身分組`權限** | `.renr "First role" SecondRole`
-`.removeallroles` `.rar` | 移除指定玩家的所有身分組。 **機器人需要`管理身分組`權限** | `.rar @User`
-`.createrole` `.cr` | 以使用者提供的名稱創建一個身分組。 **機器人需要`管理身分組`權限** | `.cr Awesome Role`
-`.rolehoist` `.rh` | 設定指定身分組成員是否要與線上成員分開顯示。 **機器人需要`管理身分組`權限** | `.rh Guests true` 或 `.rh "Space Wizards" true`
-`.rolecolor` `.roleclr` | 將選定身分組的顏色設置為使用者提供的十六進位色碼或0-255的RGB色碼。 **機器人需要`管理身分組`權限** | `.roleclr Admin 255 200 100` 或 `.roleclr Admin ffba55`
 `.deafen` `.deaf` | 伺服器端拒聽特定成員(可選擇複數成員)。 **機器人需要`拒聽成員`權限** | `.deaf "@Someguy"` 或 `.deaf "@Someguy" "@Someguy"`
 `.undeafen` `.undef` | 解除伺服器端拒聽特定成員(可選擇複數成員)。 **機器人需要`拒聽成員`權限** | `.undef "@Someguy"` 或 `.undef "@Someguy" "@Someguy"`
 `.delvoichanl` `.dvch` | 刪除指定的語音頻道。 **機器人需要`管理頻道`權限** | `.dvch VoiceChannelName`
@@ -46,7 +39,6 @@
 `.creatxtchanl` `.ctch` | 以使用者提供的名稱創建一個文字頻道。 **機器人需要`管理頻道`權限** | `.ctch TextChannelName`
 `.settopic` `.st` | 設置目前所在頻道的主題。 **機器人需要`管理頻道`權限** | `.st My new topic`
 `.setchanlname` `.schn` | 更改目前所在頻道的名稱。 **機器人需要`管理頻道`權限** | `.schn NewName`
-`.mentionrole` `.menro` | 通知特定身分組內的所有成員(可選擇複數身分組，以','分隔不同的身分組)。 **機器人需要`通知所有人`權限** | `.menro RoleName`
 `.donators` | 列出所有可愛的贊助者。 | `.donators`
 `.donadd` | 將一名贊助者添加到資料庫。 **僅限機器人所有者** | `.donadd Donate Amount`
 `.autoassignrole` `.aar` | 自動給予每個新加入的用戶選定的身分組。 **機器人需要`管理身分組`權限** | `.aar` 關閉, `.aar 身分組名稱` 開啟
@@ -71,7 +63,7 @@
 `.voicemute` | Prevents a mentioned user from speaking in voice channels. **機器人需要`靜音成員`權限** | `.voicemute @Someone`
 `.voiceunmute` | Gives a previously voice-muted user a permission to speak. **機器人需要`靜音成員`權限** | `.voiceunmute @Someguy`
 `.rotateplaying` `.ropl` | Toggles rotation of playing status of the dynamic strings you previously specified. **僅限機器人所有者** | `.ropl`
-`.addplaying` `.adpl` | Adds a specified string to the list of playing strings to rotate. Supported placeholders: `%servers%`, `%users%`, `%playing%`, `%queued%`, `%time%`, `%shardid%`, `%shardcount%`, `%shardguilds%`. **僅限機器人所有者** | `.adpl`
+`.addplaying` `.adpl` | Adds a specified string to the list of playing strings to rotate. You have to pick either 'Playing', 'Watching' or 'ListeningTo' as the first parameter. Supported placeholders: `%servers%`, `%users%`, `%playing%`, `%queued%`, `%time%`, `%shardid%`, `%shardcount%`, `%shardguilds%`. **僅限機器人所有者** | `.adpl Playing with you` 或 `.adpl Watching you sleep`
 `.listplaying` `.lipl` | Lists all playing statuses with their corresponding number. **僅限機器人所有者** | `.lipl`
 `.removeplaying` `.rmpl` `.repl` | Removes a playing string on a given number. **僅限機器人所有者** | `.rmpl`
 `.prefix` | Sets this server's prefix for all bot commands. Provide no arguments to see the current server prefix.  | `.prefix +`
@@ -83,6 +75,17 @@
 `.prune` `.clear` | `.prune` removes all Nadeko's messages in the last 100 messages. `.prune X` removes last `X` number of messages from the channel (up to 100). `.prune @Someone` removes all Someone's messages in the last 100 messages. `.prune @Someone X` removes last `X` number of 'Someone's' messages in the channel.  | `.prune` 或 `.prune 5` 或 `.prune @Someone` 或 `.prune @Someone X`
 `.slowmode` | Toggles slowmode. Disable by specifying no parameters. To enable, specify a number of messages each user can send, and an interval in seconds. For example 1 message every 5 seconds. **機器人需要`管理訊息`權限** | `.slowmode 1 5` 或 `.slowmode`
 `.slowmodewl` | Ignores a role or a user from the slowmode feature. **機器人需要`管理訊息`權限** | `.slowmodewl SomeRole` 或 `.slowmodewl AdminDude`
+`.reactionroles` `.rero` | Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the first argument to make them exclusive. You can have up to 5 of these enabled on one server at a time. **機器人需要`管理身分組`權限** | `.reactionroles Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:` 或 `.reactionroles excl Horde :Horde: Alliance :Alliance:`
+`.reactionroleslist` `.reroli` | Lists all ReactionRole messages on this channel and their indexes. **機器人需要`管理身分組`權限** | `.reactionroleslist`
+`.reactionrolesremove` `.rerorm` | Removed a ReactionRole message on the specified index. **機器人需要`管理身分組`權限** | `.reactionrolesrm 1`
+`.setrole` `.sr` | 給予一名玩家指定的身分組。 **機器人需要`管理身分組`權限** | `.sr @User Guest`
+`.removerole` `.rr` | 移除一名玩家指定的身分組。 **機器人需要`管理身分組`權限** | `.rr @User Admin`
+`.renamerole` `.renr` | 重新命名身分組。重新命名的身分組權限必須低於機器人所擁有的最高身分組。 **機器人需要`管理身分組`權限** | `.renr "First role" SecondRole`
+`.removeallroles` `.rar` | 移除指定玩家的所有身分組。 **機器人需要`管理身分組`權限** | `.rar @User`
+`.createrole` `.cr` | 以使用者提供的名稱創建一個身分組。 **機器人需要`管理身分組`權限** | `.cr Awesome Role`
+`.rolehoist` `.rh` | 設定指定身分組成員是否要與線上成員分開顯示。 **機器人需要`管理身分組`權限** | `.rh Guests true` 或 `.rh "Space Wizards" true`
+`.rolecolor` `.roleclr` | 將選定身分組的顏色設置為使用者提供的十六進位色碼或0-255的RGB色碼。 **機器人需要`管理身分組`權限** | `.roleclr Admin 255 200 100` 或 `.roleclr Admin ffba55`
+`.mentionrole` `.menro` | 通知特定身分組內的所有成員(可選擇複數身分組，以','分隔不同的身分組)。 **機器人需要`通知所有人`權限** | `.menro RoleName`
 `.adsarm` | Toggles the automatic deletion of confirmations for `.iam` and `.iamn` commands. **機器人需要`管理訊息`權限** | `.adsarm`
 `.asar` | Adds a role to the list of self-assignable roles. You can also specify a group. If 'Exclusive self-assignable roles' feature is enabled, users will be able to pick one role per group. **機器人需要`管理身分組`權限** | `.asar Gamer` 或 `.asar 1 Alliance` 或 `.asar 1 Horde`
 `.rsar` | Removes a specified role from the list of self-assignable roles. **機器人需要`管理身分組`權限** | `.rsar`
@@ -110,8 +113,8 @@
 `.setgame` | Sets the bots game status to either Playing, ListeningTo, or Watching. **僅限機器人所有者** | `.setgame Playing with snakes.` 或 `.setgame Watching anime.` 或 `.setgame ListeningTo music.`
 `.setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **僅限機器人所有者** | `.setstream TWITCHLINK Hello`
 `.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **僅限機器人所有者** | `.send serverid|c:channelid message` 或 `.send serverid|u:userid message`
-`.reloadimages` | Reloads images bot is using. Safe to use even when bot is being used heavily. **僅限機器人所有者** | `.reloadimages`
-`.reloadbotconfig` | reloadbotconfig **僅限機器人所有者** | `reloadbotconfig`
+`.imagesreload` | Reloads images bot is using. Safe to use even when bot is being used heavily. **僅限機器人所有者** | `.imagesreload`
++`.botconfigreload` | Reloads bot configuration in case you made changes to the BotConfig table either with .execsql or manually in the .db file. **僅限機器人所有者** | `.botconfigreload`
 `.greetdel` `.grdel` | Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. **機器人需要`管理伺服器`權限** | `.greetdel 0` 或 `.greetdel 30`
 `.greet` | Toggles anouncements on the current channel when someone joins the server. **機器人需要`管理伺服器`權限** | `.greet`
 `.greetmsg` | Sets a new join announcement message which will be shown in the server's channel. Type `%user%` if you want to mention the new member. Using it with no message will show the current greet message. You can use embed json from <http://nadekobot.me/embedbuilder/> instead of a regular text, if you want the message to be embedded. **機器人需要`管理伺服器`權限** | `.greetmsg Welcome, %user%.`
@@ -264,8 +267,8 @@
 `.raffle` | Prints a name and ID of a random online user from the server, or from the online user in the specified role.  | `.raffle` 或 `.raffle RoleName`
 `.raffleany` | Prints a name and ID of a random user from the server, or from the specified role.  | `.raffleany` 或 `.raffleany  RoleName`
 `.$` `currency` `.$$` `.$$` `cash` `cur` | 查看自己或他人目前擁有多少貨幣 (預設為查看自己)。 | `.$` 或 `.$ @SomeGuy`
-`.give` | 給予他人貨幣。 | `.give 1 @SomeGuy`
-`.award` | Awards someone a certain amount of currency.  You can also specify a role name to award currency to all users in a role. **僅限機器人所有者** | `.award 100 @person` 或 `.award 5 Role Of Gamblers`
+`.give` | 給予他人指定數量的貨幣。你也可以在對象後面加上原因。 | `.give 1 @SomeGuy` 或 `.give 5 @CootGurl Ur so pwetty`
+`.award` | 獎勵他人指定數量的貨幣。你也可以在對象後面加上原因。你也可以使用身分組名稱來獎勵所有該身分組的成員。 **僅限機器人所有者** | `.award 100 @person` 或 `.award 5 Role Of Gamblers`
 `.take` | Takes a certain amount of currency from someone. **Bot owner only** | `.take 1 @SomeGuy`
 `.rollduel` | Challenge someone to a roll duel by specifying the amount and the user you wish to challenge as the parameters. To accept the challenge, just specify the name of the user who challenged you, without the amount.  | `.rollduel 50 @SomeGuy` 或 `.rollduel @Challenger`
 `.betroll` `.br` | 投注一定數量的貨幣並擲骰子。骰子點數超過66將會有2倍的獎勵、超過90會有4倍、100則會有10倍 | `.br 5`
@@ -363,6 +366,10 @@
 `.osub` | Shows information about an osu beatmap.  | `.osub https://osu.ppy.sh/s/127712`
 `.osu5` | Displays a user's top 5 plays.  | `.osu5 Name`
 `.overwatch` `.ow` | Show's basic stats on a player (competitive rank, playtime, level etc) Region codes are: `eu` `us` `cn` `kr`  | `.ow us Battletag#1337` 或 `.overwatch eu Battletag#2016`
+`.pathofexile` `.poe` | Searches characters for a given Path of Exile account. May specify league name to filter results.  | `.poe "Zizaran"`
++`.pathofexileleagues` `.poel` | Returns a list of the main Path of Exile leagues.  | `.poel`
++`.pathofexilecurrency` `.poec` | Returns the chaos equivalent of a given currency or exchange rate between two currencies.  | `.poec Standard "Mirror of Kalandra"`
++`.pathofexileitem` `.poei` | Searches for a Path of Exile item from the Path of Exile GamePedia.  | `.poei "Quill Rain"`
 `.placelist` | Shows the list of available tags for the `.place` command.  | `.placelist`
 `.place` | Shows a placeholder image of a given tag. Use `.placelist` to see all available tags. You can specify the width and height of the image as the last two optional arguments.  | `.place Cage` 或 `.place steven 500 400`
 `.pokemon` `.poke` | Searches for a pokemon.  | `.poke Sylveon`
@@ -379,10 +386,6 @@
 `.autotranslang` `.atl` | Sets your source and target language to be used with `.at`. Specify no arguments to remove previously set value.  | `.atl en>fr`
 `.translangs` | 列出所有有效的翻譯語言。 | `.translangs`
 `.xkcd` | Shows a XKCD comic. No arguments will retrieve random one. Number argument will retrieve a specific comic, and "latest" will get the latest one.  | `.xkcd` 或 `.xkcd 1400` 或 `.xkcd latest`
-`.pathofexile` `.poe` | Retrieves character list from the specified account name. Can filter by league name. Paginated, 10 characters per page. | `.poe "Zizaran"` 或 `.poe "Zizaran" "Standard"`
-`.pathofexileleagues` `.poel` | Retrieves the list of current main league names. Non-SSF names are valid for the `.poec` command. | `.poel`
-`.pathofexilecurrency` `.poec` | By default, shows the Chaos Orb equivalent of the input currency. Specify two currencies to determine the exchange rate between them. Some common shorthand currency names can be used. Data is retrieved from https://poe.ninja | `.poec Standard "Mirror of Kalandra"` 或 `.poec Standard "Orb of Alchemy" "Vaal Orb"`
-`.pathofexileitem` `.poei` | Retrieves tooltip for the specified unique item. | `.poei "Headhunter"`
 
 ###### [回目錄](#_1)
 
@@ -415,7 +418,7 @@
 `.userinfo` `.uinfo` | Shows info about the user. If no user is supplied, it defaults a user running the command.  | `.uinfo @SomeUser`
 `.activity` | Checks for spammers. **僅限機器人所有者** | `.activity`
 `.parewrel` | Forces the update of the list of patrons who are eligible for the reward. | `.parewrel`
-`.clparew` | Claim patreon rewards. If you're subscribed to bot owner's patreon you can use this command to claim your rewards - assuming bot owner did setup has their patreon key.  | `.clparew`
+`.clparew` `.claparew` | Claim patreon rewards. If you're subscribed to bot owner's patreon you can use this command to claim your rewards - assuming bot owner did setup has their patreon key.  | `.clparew`
 `.listquotes` `.liqu` | Lists all quotes on the server ordered alphabetically or by ID. 15 Per page.  | `.liqu 3` 或 `.liqu 3 id`
 `...` | Shows a random quote with a specified name.  | `... abc`
 `.qsearch` | Shows a random quote for a keyword that contains any text specified in the search.  | `.qsearch keyword text`
