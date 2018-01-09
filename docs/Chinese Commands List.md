@@ -85,7 +85,7 @@
 `.createrole` `.cr` | 以使用者提供的名稱創建一個身分組。 **機器人需要`管理身分組`權限** | `.cr Awesome Role`
 `.rolehoist` `.rh` | 設定指定身分組成員是否要與線上成員分開顯示。 **機器人需要`管理身分組`權限** | `.rh Guests true` 或 `.rh "Space Wizards" true`
 `.rolecolor` `.roleclr` | 將選定身分組的顏色設置為使用者提供的十六進位色碼或0-255的RGB色碼。 **機器人需要`管理身分組`權限** | `.roleclr Admin 255 200 100` 或 `.roleclr Admin ffba55`
-`.mentionrole` `.menro` | 通知特定身分組內的所有成員(可選擇複數身分組，以','分隔不同的身分組)。 **機器人需要`通知所有人`權限** | `.menro RoleName`
+`.mentionrole` `.menro` | Mentions a role. If the role is not mentionable, bot will make it mentionable for a moment. **機器人需要`通知所有人`權限** | `.menro RoleName`
 `.adsarm` | Toggles the automatic deletion of confirmations for `.iam` and `.iamn` commands. **機器人需要`管理訊息`權限** | `.adsarm`
 `.asar` | Adds a role to the list of self-assignable roles. You can also specify a group. If 'Exclusive self-assignable roles' feature is enabled, users will be able to pick one role per group. **機器人需要`管理身分組`權限** | `.asar Gamer` 或 `.asar 1 Alliance` 或 `.asar 1 Horde`
 `.rsar` | Removes a specified role from the list of self-assignable roles. **機器人需要`管理身分組`權限** | `.rsar`
@@ -267,6 +267,7 @@
 `.raffle` | Prints a name and ID of a random online user from the server, or from the online user in the specified role.  | `.raffle` 或 `.raffle RoleName`
 `.raffleany` | Prints a name and ID of a random user from the server, or from the specified role.  | `.raffleany` 或 `.raffleany  RoleName`
 `.$` `currency` `.$$` `.$$` `cash` `cur` | 查看自己或他人目前擁有多少貨幣 (預設為查看自己)。 | `.$` 或 `.$ @SomeGuy`
+`.curtrs` | Shows your currency transactions on the specified page. Bot owner can see other people's transactions too.  | `.curtrs 2` 或 `.curtrs @SomeUser 2`
 `.give` | 給予他人指定數量的貨幣。你也可以在對象後面加上原因。 | `.give 1 @SomeGuy` 或 `.give 5 @CootGurl Ur so pwetty`
 `.award` | 獎勵他人指定數量的貨幣。你也可以在對象後面加上原因。你也可以使用身分組名稱來獎勵所有該身分組的成員。 **僅限機器人所有者** | `.award 100 @person` 或 `.award 5 Role Of Gamblers`
 `.take` | Takes a certain amount of currency from someone. **Bot owner only** | `.take 1 @SomeGuy`
@@ -275,6 +276,10 @@
 `.leaderboard` `.lb` | 顯示機器人使用者的貨幣排行榜。 | `.lb`
 `.race` | 開始一場新的動物賽跑(該比賽並非使用者控制，而是隨機前進；一種碰運氣的遊戲)。 | `.race`
 `.joinrace` `.jr` | 加入一場新的比賽，您可以指定下注金額(可選)。如果您獲勝了，將得到**下注金額x(參與玩家數-1)**。 | `.jr` 或 `.jr 5`
+`.blackjack` `.bj` | Start or join a blackjack game. You must specify the amount you're betting. Use `.hit`, `.stand` and `.double` commands to play. Game is played with 4 decks.  | `.bj 50`
+`.hit` | In the blackjack game, ask the dealer for an extra card.  | `.hit`
+`.stand` | Finish your turn in the blackjack game.  | `.stand`
+`.double` | In the blackjack game, double your bet in order to receive exactly one more card, and your turn ends.  | `.double`
 `.startevent` | 開始一個貨幣贈送活動。目前僅可使用`reaction`和`sneakygamestatus`。 **僅限機器人所有者** | `.startevent reaction`
 `.rafflecur` | Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a `mixed` mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet.  | `.rafflecur 20` 或 `.rafflecur mixed 15`
 `.roll` | Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd.  | `.roll` 或 `.roll 7` 或 `.roll 3d5` 或 `.roll 5dF`
@@ -427,6 +432,8 @@
 `.quotedel` `.qdel` | Deletes a quote with the specified ID. You have to be either server Administrator or the creator of the quote to delete it.  | `.qdel 123456`
 `.delallq` `.daq` | Deletes all quotes on a specified keyword. **機器人需要`管理員`權限** | `.delallq kek`
 `.remind` | Sends a message to you or a channel after certain amount of time. First argument is `me`/`here`/'channelname'. Second argument is time in a descending order (mo>w>d>h>m) example: 1w5d3h10m. Third argument is a (multiword) message.  | `.remind me 1d5h Do something` 或 `.remind #general 1m Start now!`
+`.remindlist` `.remindl` `.remindlst` | Lists all reminders you created. Paginated.  | `.remindlist 1`
+`.reminddel` `.remindrm` | Deletes a reminder on the specified index.  | `.remindrm 3`
 `.remindtemplate` | Sets message for when the remind is triggered.  Available placeholders are `%user%` - user who ran the command, `%message%` - Message specified in the remind, `%target%` - target channel of the remind. **僅限機器人所有者** | `.remindtemplate %user%, do %message%!`
 `.repeatinvoke` `.repinv` | Immediately shows the repeat message on a certain index and restarts its timer. **機器人需要`管理訊息`權限** | `.repinv 1`
 `.repeatremove` `.reprm` | Removes a repeating message on a specified index. Use `.repeatlist` to see indexes. **機器人需要`管理訊息`權限** | `.reprm 2`
@@ -487,7 +494,9 @@
 `.clubunban` | 將以前被封鎖加入俱樂部的用戶解除封鎖。您不須是俱樂部老闆。 | `.clubunban b1nzy#1337`
 `.clublevelreq` | 設定加入俱樂部的最低等級需求。您必須是俱樂部老闆。需求不得設定為低於5。 | `.clublevelreq 7`
 `.clubdisband` | 解散您所屬的俱樂部。這個命令是無法復原的，使用前請再三確認。 | `.clubdisband`
+`.clubdesc` | Sets the club description. Maximum 150 characters. Club owner only.  | `.clubdesc This is the best club please join.`
 `.clublb` | 顯示俱樂部排名。分頁。 | `.clublb 2`
+`.xpreset` | Resets specified user's XP, or the XP of all users in the server. You can't reverse this action. **機器人需要`管理員`權限** | `.xpreset @b1nzy` 或 `.xpreset`
  
  ###### [回目錄](#_1)
 
