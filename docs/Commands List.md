@@ -220,7 +220,7 @@ Commands and aliases | Description | Usage
 `.rpeatplaylst` `.rpl` | Toggles repeat of all songs in the queue (every song that finishes is added to the end of the queue).  | `.rpl`
 `.autoplay` `.ap` | Toggles autoplay - When the song is finished, automatically queue a related Youtube song. (Works only for Youtube songs and when queue is empty)  | `.ap`
 `.setmusicchannel` `.smch` | Sets the current channel as the default music output channel. This will output playing, finished, paused and removed songs to that channel instead of the channel where the first song was queued in. **Requires ManageMessages server permission.** | `.smch`
-`.unsetmusicchannel` `.usmch` | Bot will output playing, finished, paused and removed songs to the channel where the first song was queued in. **Requires ManageMessages server permission.** | `.smch`
+`.unsetmusicchannel` `.usmch` | Bot will output playing, finished, paused and removed songs to the channel where the first song was queued in. **Requires ManageMessages server permission.** | `.usmch`
 
 ###### [Back to ToC](#table-of-contents)
 
