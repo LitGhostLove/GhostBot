@@ -63,10 +63,10 @@
 `.voicemute` | Prevents a mentioned user from speaking in voice channels. **機器人需要`靜音成員`權限** | `.voicemute @Someone`
 `.voiceunmute` | Gives a previously voice-muted user a permission to speak. **機器人需要`靜音成員`權限** | `.voiceunmute @Someguy`
 `.rotateplaying` `.ropl` | Toggles rotation of playing status of the dynamic strings you previously specified. **僅限機器人所有者** | `.ropl`
-`.addplaying` `.adpl` | Adds a specified string to the list of playing strings to rotate. You have to pick either 'Playing', 'Watching' or 'ListeningTo' as the first parameter. Supported placeholders: `%servers%`, `%users%`, `%playing%`, `%queued%`, `%time%`, `%shardid%`, `%shardcount%`, `%shardguilds%`. **僅限機器人所有者** | `.adpl Playing with you` 或 `.adpl Watching you sleep`
+`.addplaying` `.adpl` | Adds a specified string to the list of playing strings to rotate. You have to pick either 'Playing', 'Watching' or 'Listening' as the first parameter. Supported placeholders: `%servers%`, `%users%`, `%playing%`, `%queued%`, `%time%`, `%shardid%`, `%shardcount%`, `%shardguilds%`. **僅限機器人所有者** | `.adpl Playing with you` 或 `.adpl Watching you sleep`
 `.listplaying` `.lipl` | Lists all playing statuses with their corresponding number. **僅限機器人所有者** | `.lipl`
 `.removeplaying` `.rmpl` `.repl` | Removes a playing string on a given number. **僅限機器人所有者** | `.rmpl`
-`.prefix` | Sets this server's prefix for all bot commands. Provide no arguments to see the current server prefix.  | `.prefix +`
+`.prefix` | Sets this server's prefix for all bot commands. Provide no arguments to see the current server prefix.**機器人需要`管理員`權限** | `.prefix +`
 `.defprefix` | Sets bot's default prefix for all bot commands. Provide no arguments to see the current default prefix. This will not change this server's current prefix. **僅限機器人所有者** | `.defprefix +`
 `.antiraid` | Sets an anti-raid protection on the server. First argument is number of people which will trigger the protection. Second one is a time interval in which that number of people needs to join in order to trigger the protection, and third argument is punishment for those people (Kick, Ban, Mute) **機器人需要`管理員`權限** | `.antiraid 5 20 Kick`
 `.antispam` | Stops people from repeating same message X times in a row. You can specify to either mute, kick or ban the offenders. If you're using mute, you can add a number of seconds at the end to use a timed mute. Max message count is 10. **機器人需要`管理員`權限** | `.antispam 3 Mute` 或 `.antispam 4 Kick` 或 `.antispam 6 Ban`
@@ -110,7 +110,7 @@
 `.setnick` | Changes the nickname of the bot on this server. You can also target other users to change their nickname. **機器人需要`更改暱稱`權限** | `.setnick BotNickname` 或 `.setnick @SomeUser New Nickname`
 `.setstatus` | Sets the bot's status. (Online/Idle/Dnd/Invisible) **僅限機器人所有者** | `.setstatus Idle`
 `.setavatar` `.setav` | Sets a new avatar image for the NadekoBot. Argument is a direct link to an image. **僅限機器人所有者** | `.setav http://i.imgur.com/xTG3a1I.jpg`
-`.setgame` | Sets the bots game status to either Playing, ListeningTo, or Watching. **僅限機器人所有者** | `.setgame Playing with snakes.` 或 `.setgame Watching anime.` 或 `.setgame ListeningTo music.`
+`.setgame` | Sets the bots game status to either Playing, Listening, or Watching. **僅限機器人所有者** | `.setgame Playing with snakes.` 或 `.setgame Watching anime.` 或 `.setgame Listening music.`
 `.setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **僅限機器人所有者** | `.setstream TWITCHLINK Hello`
 `.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **僅限機器人所有者** | `.send serverid|c:channelid message` 或 `.send serverid|u:userid message`
 `.imagesreload` | Reloads images bot is using. Safe to use even when bot is being used heavily. **僅限機器人所有者** | `.imagesreload`
@@ -276,7 +276,7 @@
 `.leaderboard` `.lb` | 顯示機器人使用者的貨幣排行榜。 | `.lb`
 `.race` | 開始一場新的動物賽跑(該比賽並非使用者控制，而是隨機前進；一種碰運氣的遊戲)。 | `.race`
 `.joinrace` `.jr` | 加入一場新的比賽，您可以指定下注金額(可選)。如果您獲勝了，將得到**下注金額x(參與玩家數-1)**。 | `.jr` 或 `.jr 5`
-`.blackjack` `.bj` | Start or join a blackjack game. You must specify the amount you're betting. Use `.hit`, `.stand` and `.double` commands to play. Game is played with 4 decks.  | `.bj 50`
+`.blackjack` `.bj` | Start or join a blackjack game. You must specify the amount you're betting. Use `.hit`, `.stand` and `.double` commands to play. Game is played with 4 decks.Dealer hits on soft 17 and wins draws. | `.bj 50`
 `.hit` | In the blackjack game, ask the dealer for an extra card.  | `.hit`
 `.stand` | Finish your turn in the blackjack game.  | `.stand`
 `.double` | In the blackjack game, double your bet in order to receive exactly one more card, and your turn ends.  | `.double`
