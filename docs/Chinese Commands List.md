@@ -1,3 +1,5 @@
+#原作者以停止更新此站, 若有需要請至[新版指令列表](https://nadekobot.me/commands)(沒有中文翻譯)
+
 贊助原作者 => patreon: https://patreon.com/nadekobot paypal: https://paypal.me/Kwoth
 
 ## 目錄
