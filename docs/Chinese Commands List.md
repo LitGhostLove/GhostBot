@@ -114,7 +114,7 @@
 `.setstream` | Sets the bots stream. First argument is the twitch link, second argument is stream name. **僅限機器人所有者** | `.setstream TWITCHLINK Hello`
 `.send` | Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`. **僅限機器人所有者** | `.send serverid|c:channelid message` 或 `.send serverid|u:userid message`
 `.imagesreload` | Reloads images bot is using. Safe to use even when bot is being used heavily. **僅限機器人所有者** | `.imagesreload`
-+`.botconfigreload` | Reloads bot configuration in case you made changes to the BotConfig table either with .execsql or manually in the .db file. **僅限機器人所有者** | `.botconfigreload`
+`.botconfigreload` | Reloads bot configuration in case you made changes to the BotConfig table either with .execsql or manually in the .db file. **僅限機器人所有者** | `.botconfigreload`
 `.greetdel` `.grdel` | Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion. **機器人需要`管理伺服器`權限** | `.greetdel 0` 或 `.greetdel 30`
 `.greet` | Toggles anouncements on the current channel when someone joins the server. **機器人需要`管理伺服器`權限** | `.greet`
 `.greetmsg` | Sets a new join announcement message which will be shown in the server's channel. Type `%user%` if you want to mention the new member. Using it with no message will show the current greet message. You can use embed json from <http://nadekobot.me/embedbuilder/> instead of a regular text, if you want the message to be embedded. **機器人需要`管理伺服器`權限** | `.greetmsg Welcome, %user%.`
@@ -372,9 +372,9 @@
 `.osu5` | Displays a user's top 5 plays.  | `.osu5 Name`
 `.overwatch` `.ow` | Show's basic stats on a player (competitive rank, playtime, level etc) Region codes are: `eu` `us` `cn` `kr`  | `.ow us Battletag#1337` 或 `.overwatch eu Battletag#2016`
 `.pathofexile` `.poe` | Searches characters for a given Path of Exile account. May specify league name to filter results.  | `.poe "Zizaran"`
-+`.pathofexileleagues` `.poel` | Returns a list of the main Path of Exile leagues.  | `.poel`
-+`.pathofexilecurrency` `.poec` | Returns the chaos equivalent of a given currency or exchange rate between two currencies.  | `.poec Standard "Mirror of Kalandra"`
-+`.pathofexileitem` `.poei` | Searches for a Path of Exile item from the Path of Exile GamePedia.  | `.poei "Quill Rain"`
+`.pathofexileleagues` `.poel` | Returns a list of the main Path of Exile leagues.  | `.poel`
+`.pathofexilecurrency` `.poec` | Returns the chaos equivalent of a given currency or exchange rate between two currencies.  | `.poec Standard "Mirror of Kalandra"`
+`.pathofexileitem` `.poei` | Searches for a Path of Exile item from the Path of Exile GamePedia.  | `.poei "Quill Rain"`
 `.placelist` | Shows the list of available tags for the `.place` command.  | `.placelist`
 `.place` | Shows a placeholder image of a given tag. Use `.placelist` to see all available tags. You can specify the width and height of the image as the last two optional arguments.  | `.place Cage` 或 `.place steven 500 400`
 `.pokemon` `.poke` | Searches for a pokemon.  | `.poke Sylveon`
