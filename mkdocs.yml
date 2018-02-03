@@ -11,7 +11,7 @@ pages:
     - 使用資源: guides/From Source.md
 - 命令:
     - 說明: Readme.md
-    - 英文命令列表: https://nadekobot.me/commands
+    - 英文命令列表: Commands List.md
     - 中文命令列表: Chinese Commands List.md
 - 功能說明:
     - JSON 功能: JSON Explanations.md
