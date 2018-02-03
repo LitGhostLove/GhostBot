@@ -22,7 +22,7 @@ If you want to contribute, be sure to PR on the current **[default][repo]** bran
 	- [使用資源](guides/From Source.md)
 - 命令
 	- [說明](Readme.md)
-	- [英文命令列表](Commands List.md)
+	- [英文命令列表](https://nadekobot.me/commands)
 	- [中文命令列表](Chinese Commands List.md)
 - 功能說明
 	- [權限系統](Permissions System.md)
